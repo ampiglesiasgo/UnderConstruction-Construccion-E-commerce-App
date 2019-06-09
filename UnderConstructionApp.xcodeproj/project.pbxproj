@@ -14,6 +14,7 @@
 		B954E29622AB2D9C00170141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954E29522AB2D9C00170141 /* Assets.xcassets */; };
 		B954E29922AB2D9C00170141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */; };
 		B9C471ED22ACE87600918EAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */; };
+		B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471EE22ADA01500918EAE /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B954E29822AB2D9C00170141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B954E29A22AB2D9C00170141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B9C471EE22ADA01500918EAE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA76D35D00D3E3FACE54D4D1 /* Pods_UnderConstructionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnderConstructionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				0F3013F6D8624BAD486C4644 /* Pods-UnderConstructionApp.debug.xcconfig */,
 				32ADA9D59A071469637A3017 /* Pods-UnderConstructionApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				B954E29522AB2D9C00170141 /* Assets.xcassets */,
 				B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */,
 				B954E29A22AB2D9C00170141 /* Info.plist */,
+				B9C471EE22ADA01500918EAE /* RegisterViewController.swift */,
 			);
 			path = UnderConstructionApp;
 			sourceTree = "<group>";
@@ -168,16 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UnderConstructionApp/Pods-UnderConstructionApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -192,15 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-UnderConstructionApp-checkManifestLockResult.txt",
 			);
@@ -216,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B954E29122AB2D9C00170141 /* ViewController.swift in Sources */,
 				B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */,
 			);

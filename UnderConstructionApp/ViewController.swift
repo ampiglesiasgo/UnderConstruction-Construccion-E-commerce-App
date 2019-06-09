@@ -26,14 +26,26 @@ class ViewController: UIViewController {
         loginEmailTextField.clipsToBounds = true
         loginPasswordTextField.layer.cornerRadius = 15
         loginPasswordTextField.clipsToBounds = true
-
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //Send data to the shoppingCartViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toRegisterSegue"{
+            let shoppingCartViewController = (segue.destination as! RegisterViewController)
+
+        }
+    }
+    
+    
+    @IBAction func singUpButton(_ sender: Any) {
+        performSegue(withIdentifier: "toRegisterSegue", sender: self)
+    }
+    
 
 
 }
