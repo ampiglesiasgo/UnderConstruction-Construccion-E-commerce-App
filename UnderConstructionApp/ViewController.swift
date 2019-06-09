@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillLayoutSubviews() {
         loginBackView.backgroundColor = .white
         loginBackView.dropShadow(color: .gray, opacity: 1, offSet: CGSize(width: -1, height: 1), radius: 3, scale: true)
         loginButton.layer.cornerRadius = 15
@@ -32,12 +36,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //Send data to the shoppingCartViewController
+    //Send data to the toRegisterSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toRegisterSegue"{
-            let shoppingCartViewController = (segue.destination as! RegisterViewController)
+            let registerViewController = (segue.destination as! RegisterViewController)
 
+        }
+        if segue.identifier == "loginToHomeSegue"{
+            let homeViewController = (segue.destination as! HomeViewController)
+            
         }
     }
     
@@ -46,7 +54,22 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toRegisterSegue", sender: self)
     }
     
-
+    
+    @IBAction func loginActionButton(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
+            if error == nil{
+                self.performSegue(withIdentifier: "loginToHomeSegue", sender: self)
+            }
+            else{
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 
 }
 
