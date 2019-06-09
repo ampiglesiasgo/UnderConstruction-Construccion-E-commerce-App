@@ -86,18 +86,34 @@
 		B954E28D22AB2D9C00170141 /* UnderConstructionApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9C471F522ADCD8000918EAE /* ViewControllers */,
+				B9C471F422ADCD6E00918EAE /* Views */,
 				B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */,
+				B954E29522AB2D9C00170141 /* Assets.xcassets */,
+				B954E29A22AB2D9C00170141 /* Info.plist */,
+			);
+			path = UnderConstructionApp;
+			sourceTree = "<group>";
+		};
+		B9C471F422ADCD6E00918EAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B954E29222AB2D9C00170141 /* Main.storyboard */,
+				B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9C471F522ADCD8000918EAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				B954E28E22AB2D9C00170141 /* AppDelegate.swift */,
 				B954E29022AB2D9C00170141 /* ViewController.swift */,
-				B954E29222AB2D9C00170141 /* Main.storyboard */,
-				B954E29522AB2D9C00170141 /* Assets.xcassets */,
-				B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */,
-				B954E29A22AB2D9C00170141 /* Info.plist */,
 				B9C471EE22ADA01500918EAE /* RegisterViewController.swift */,
 				B9C471F022ADA47D00918EAE /* HomeViewController.swift */,
 				B9C471F222ADCB3500918EAE /* StartViewController.swift */,
 			);
-			path = UnderConstructionApp;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
