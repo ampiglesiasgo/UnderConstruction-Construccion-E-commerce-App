@@ -38,13 +38,13 @@ class RegisterViewController: UIViewController {
     }
     */
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "RegisterToHomeSegue"{
-            let homeViewController = (segue.destination as! HomeViewController)
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if segue.identifier == "RegisterToHomeSegue"{
+//            let homeViewController = (segue.destination as! HomeViewController)
+//
+//        }
+//    }
     
 
     @IBAction func registerButtonAction(_ sender: Any) {
