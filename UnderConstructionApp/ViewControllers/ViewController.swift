@@ -37,17 +37,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     //Send data to the toRegisterSegue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "toRegisterSegue"{
-            let registerViewController = (segue.destination as! RegisterViewController)
-
-        }
-        if segue.identifier == "loginToHomeSegue"{
-            let homeViewController = (segue.destination as! HomeViewController)
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if segue.identifier == "toRegisterSegue"{
+//            let registerViewController = (segue.destination as! RegisterViewController)
+//
+//        }
+//        if segue.identifier == "loginToHomeSegue"{
+//            let homeViewController = (segue.destination as! HomeViewController)
+//            
+//        }
+//    }
     
     
     @IBAction func singUpButton(_ sender: Any) {
