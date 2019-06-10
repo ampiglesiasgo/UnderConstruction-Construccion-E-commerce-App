@@ -15,7 +15,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var registerBackView: UIView!
     
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,16 +29,20 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        registerBackView.backgroundColor = .white
+        registerBackView.dropShadow(color: .gray, opacity: 1, offSet: CGSize(width: -1, height: 1), radius: 3, scale: true)
+        registerButton.layer.cornerRadius = 15
+        registerButton.clipsToBounds = true
+        emailTextField.layer.cornerRadius = 15
+        emailTextField.clipsToBounds = true
+        passwordTextField.layer.cornerRadius = 15
+        passwordTextField.clipsToBounds = true
+        userNameTextField.layer.cornerRadius = 15
+        userNameTextField.clipsToBounds = true
+        
     }
-    */
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //
@@ -62,3 +68,4 @@ class RegisterViewController: UIViewController {
         }
     }
 }
+
