@@ -17,6 +17,7 @@
 		B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471EE22ADA01500918EAE /* RegisterViewController.swift */; };
 		B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F022ADA47D00918EAE /* HomeViewController.swift */; };
 		B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F222ADCB3500918EAE /* StartViewController.swift */; };
+		B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F622AE03AC00918EAE /* BannerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B9C471EE22ADA01500918EAE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B9C471F022ADA47D00918EAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B9C471F222ADCB3500918EAE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B9C471F622AE03AC00918EAE /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA76D35D00D3E3FACE54D4D1 /* Pods_UnderConstructionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnderConstructionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		B954E28D22AB2D9C00170141 /* UnderConstructionApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9C471F822AE03B100918EAE /* Model */,
 				B9C471F522ADCD8000918EAE /* ViewControllers */,
 				B9C471F422ADCD6E00918EAE /* Views */,
 				B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */,
@@ -107,6 +110,7 @@
 		B9C471F522ADCD8000918EAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B9C471F622AE03AC00918EAE /* BannerCollectionViewCell.swift */,
 				B954E28E22AB2D9C00170141 /* AppDelegate.swift */,
 				B954E29022AB2D9C00170141 /* ViewController.swift */,
 				B9C471EE22ADA01500918EAE /* RegisterViewController.swift */,
@@ -114,6 +118,13 @@
 				B9C471F222ADCB3500918EAE /* StartViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B9C471F822AE03B100918EAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */,
 				B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B954E29122AB2D9C00170141 /* ViewController.swift in Sources */,
