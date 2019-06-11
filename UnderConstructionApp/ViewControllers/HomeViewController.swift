@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var bannerColletionView: UICollectionView!
@@ -54,7 +55,10 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         
         cell.bannerImage.layer.masksToBounds = true
         cell.bannerImage.layer.cornerRadius = 12
+        cell.bannerImage.kf.setImage(with: URL(string: "https://firebasestorage.googleapis.com/v0/b/underconstructionapp-578d2.appspot.com/o/Banners%2FBanner1.jpg?alt=media&token=9faee060-4642-4175-9b8d-42300a13f337"))
+
         return cell
+
         
     }
 
