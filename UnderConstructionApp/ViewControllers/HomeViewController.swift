@@ -64,7 +64,10 @@ class HomeViewController: UIViewController {
             self.bannerColletionView.reloadData()
             }
             }
-        
+    }
+    override func viewWillLayoutSubviews() {
+        bannerColletionView.layer.masksToBounds = true
+        bannerColletionView.layer.cornerRadius = 12
     }
 
 }
@@ -92,7 +95,8 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
 //            cell.descriptionLabelOutlet.text = bannerDescription
 //        }
 //        else {cell.descriptionLabelOutlet.text = "The banner description in not available"}
-        
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 12
         cell.bannerImage.layer.masksToBounds = true
         cell.bannerImage.layer.cornerRadius = 12
         cell.bannerImage.kf.setImage(with: URL(string: banner.photourl))

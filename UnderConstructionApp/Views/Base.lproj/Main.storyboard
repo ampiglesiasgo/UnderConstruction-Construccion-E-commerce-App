@@ -355,7 +355,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arP-Lr-xmX">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-D8-men">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-D8-men">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="186.5"/>
                                                 <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -369,14 +369,14 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bannerCell" id="HbK-TV-Z2q" customClass="BannerCollectionViewCell" customModule="UnderConstructionApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="20" width="338" height="147"/>
+                                                        <rect key="frame" x="0.0" y="8.5" width="338" height="170"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="338" height="147"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="338" height="170"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28N-LA-eCN">
-                                                                    <rect key="frame" x="20" y="0.0" width="298" height="147"/>
+                                                                    <rect key="frame" x="20" y="10" width="298" height="151"/>
                                                                 </imageView>
                                                             </subviews>
                                                         </view>
@@ -384,8 +384,9 @@
                                                             <constraint firstItem="28N-LA-eCN" firstAttribute="centerX" secondItem="HbK-TV-Z2q" secondAttribute="centerX" id="3uy-wf-KOe"/>
                                                             <constraint firstItem="28N-LA-eCN" firstAttribute="centerY" secondItem="HbK-TV-Z2q" secondAttribute="centerY" id="ogm-Xn-DyE"/>
                                                             <constraint firstItem="28N-LA-eCN" firstAttribute="leading" secondItem="HbK-TV-Z2q" secondAttribute="leading" constant="20" id="t5x-Dm-MoJ"/>
-                                                            <constraint firstItem="28N-LA-eCN" firstAttribute="height" secondItem="HbK-TV-Z2q" secondAttribute="height" id="zsd-bV-Vr9"/>
+                                                            <constraint firstItem="28N-LA-eCN" firstAttribute="height" secondItem="HbK-TV-Z2q" secondAttribute="height" constant="-20" id="zsd-bV-Vr9"/>
                                                         </constraints>
+                                                        <size key="customSize" width="338" height="170"/>
                                                         <connections>
                                                             <outlet property="bannerImage" destination="28N-LA-eCN" id="vhy-cj-9cA"/>
                                                         </connections>
