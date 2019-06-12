@@ -18,6 +18,8 @@
 		B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F022ADA47D00918EAE /* HomeViewController.swift */; };
 		B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F222ADCB3500918EAE /* StartViewController.swift */; };
 		B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F622AE03AC00918EAE /* BannerCollectionViewCell.swift */; };
+		B9C471FA22AF51B100918EAE /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F922AF51B100918EAE /* Banners.swift */; };
+		B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471FC22AF539C00918EAE /* ModelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		B9C471F022ADA47D00918EAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B9C471F222ADCB3500918EAE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B9C471F622AE03AC00918EAE /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9C471F922AF51B100918EAE /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
+		B9C471FC22AF539C00918EAE /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		CA76D35D00D3E3FACE54D4D1 /* Pods_UnderConstructionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnderConstructionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 		B954E28D22AB2D9C00170141 /* UnderConstructionApp */ = {
 			isa = PBXGroup;
 			children = (
+				B9C471FB22AF537300918EAE /* Managers */,
 				B9C471F822AE03B100918EAE /* Model */,
 				B9C471F522ADCD8000918EAE /* ViewControllers */,
 				B9C471F422ADCD6E00918EAE /* Views */,
@@ -123,8 +128,17 @@
 		B9C471F822AE03B100918EAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B9C471F922AF51B100918EAE /* Banners.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B9C471FB22AF537300918EAE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B9C471FC22AF539C00918EAE /* ModelManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,14 +219,26 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UnderConstructionApp/Pods-UnderConstructionApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C471FA22AF51B100918EAE /* Banners.swift in Sources */,
+				B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */,
 				B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */,
 				B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,

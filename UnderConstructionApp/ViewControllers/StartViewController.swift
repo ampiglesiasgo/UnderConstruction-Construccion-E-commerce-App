@@ -16,6 +16,8 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // [START setup]
+
 
         // Do any additional setup after loading the view.
     }

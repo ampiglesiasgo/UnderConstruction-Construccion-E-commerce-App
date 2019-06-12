@@ -8,13 +8,20 @@
 
 import UIKit
 import Kingfisher
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var bannerColletionView: UICollectionView!
+    var db: Firestore!
+
     
-    @IBOutlet weak var backYellowView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let settings = FirestoreSettings()
+        
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
 
         // Do any additional setup after loading the view.
     }
@@ -23,8 +30,41 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillLayoutSubviews() {
-        backYellowView.layer.cornerRadius = 8
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //ModelManager.shared.setBannerData(db: db)
+        db.collection("Banners").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var id = 0
+                var name = ""
+                var photourl = ""
+                var idBarraca = 0
+                for document in querySnapshot!.documents {
+                    let bannerData = document.data()
+                    for data in bannerData{
+                        if data.key == "id"{
+                            id = data.value as! Int
+                        }
+                        if data.key == "name"{
+                            name = data.value as! String
+                        }
+                        if data.key == "photourl"{
+                            photourl = data.value as! String
+                        }
+                        if data.key == "idBarraca"{
+                            idBarraca = data.value as! Int
+                        }
+                    }
+                    let bannner = Banners(name: name, id:id ,photourl:photourl,idBarraca:idBarraca)
+                    ModelManager.shared.banners.append(bannner)
+                    
+            }
+            self.bannerColletionView.reloadData()
+            }
+            }
+        
     }
 
 }
@@ -32,12 +72,12 @@ class HomeViewController: UIViewController {
 extension HomeViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return ModelManager.shared.banners.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerCell", for: indexPath) as! BannerCollectionViewCell
-//        //let banner = ModelManager.shared.banners[indexPath.row]
+        let banner = ModelManager.shared.banners[indexPath.row]
 //        if let bannerImageName = banner.bannerImageName {
 //            cell.imageBannerViewOutlet.kf.setImage(with: URL(string: bannerImageName))
 //        }
@@ -55,7 +95,7 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         
         cell.bannerImage.layer.masksToBounds = true
         cell.bannerImage.layer.cornerRadius = 12
-        cell.bannerImage.kf.setImage(with: URL(string: "https://firebasestorage.googleapis.com/v0/b/underconstructionapp-578d2.appspot.com/o/Banners%2FBanner1.jpg?alt=media&token=9faee060-4642-4175-9b8d-42300a13f337"))
+        cell.bannerImage.kf.setImage(with: URL(string: banner.photourl))
 
         return cell
 
