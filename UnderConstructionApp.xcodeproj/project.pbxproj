@@ -13,6 +13,8 @@
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
 		B954E29622AB2D9C00170141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954E29522AB2D9C00170141 /* Assets.xcassets */; };
 		B954E29922AB2D9C00170141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */; };
+		B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */; };
+		B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC222B1C00600A0ECBA /* Category.swift */; };
 		B9C471ED22ACE87600918EAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */; };
 		B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471EE22ADA01500918EAE /* RegisterViewController.swift */; };
 		B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F022ADA47D00918EAE /* HomeViewController.swift */; };
@@ -32,6 +34,8 @@
 		B954E29522AB2D9C00170141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B954E29822AB2D9C00170141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B954E29A22AB2D9C00170141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B96D9AC222B1C00600A0ECBA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B9C471EE22ADA01500918EAE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B9C471F022ADA47D00918EAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				B9C471EE22ADA01500918EAE /* RegisterViewController.swift */,
 				B9C471F022ADA47D00918EAE /* HomeViewController.swift */,
 				B9C471F222ADCB3500918EAE /* StartViewController.swift */,
+				B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B9C471F922AF51B100918EAE /* Banners.swift */,
+				B96D9AC222B1C00600A0ECBA /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
+				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B9C471FA22AF51B100918EAE /* Banners.swift in Sources */,
 				B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */,
 				B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */,
