@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var baseCollectionView: UICollectionView!
     
+    @IBOutlet weak var homeActivityIndicator: UIActivityIndicatorView!
     
     var db: Firestore!
     let bannerColletionViewIdentifier = "collectionViewCell"
@@ -36,12 +37,8 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        let bannner = Banners(name: "name", id:1 ,photourl: "https://firebasestorage.googleapis.com/v0/b/underconstructionapp-578d2.appspot.com/o/Banners%2FBanner1.jpg?alt=media&token=9faee060-4642-4175-9b8d-42300a13f337",idBarraca:1)
-//        ModelManager.shared.banners.append(bannner)
-//        let indexPath = IndexPath(row:0, section: 0)
-//        self.baseCollectionView.reloadItems(at: [indexPath])
-        
-        
+        homeActivityIndicator.isHidden = false
+        homeActivityIndicator.startAnimating()
         db.collection("Banners").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -80,7 +77,9 @@ class HomeViewController: UIViewController {
                 let indexPath = IndexPath(row:0, section: 0)
                 self.baseCollectionView.reloadItems(at: [indexPath])
 
-             
+                self.homeActivityIndicator.stopAnimating()
+                self.homeActivityIndicator.isHidden = true
+
                 //                self.baseCollectionView.reloadData()
 //                print("executed")
             }
