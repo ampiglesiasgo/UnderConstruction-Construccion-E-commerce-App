@@ -66,9 +66,7 @@ class HomeViewController: UIViewController {
                     let bannner = Banners(name: name, id:id ,photourl:photourl,idBarraca:idBarraca)
                     ModelManager.shared.banners.append(bannner)
 
-            }
-
-
+                }
 
                 for b in ModelManager.shared.banners {
                     self.bannersUrl.append(b.photourl)
@@ -77,45 +75,44 @@ class HomeViewController: UIViewController {
                 let indexPath = IndexPath(row:0, section: 0)
                 self.baseCollectionView.reloadItems(at: [indexPath])
 
-                self.homeActivityIndicator.stopAnimating()
-                self.homeActivityIndicator.isHidden = true
 
-                //                self.baseCollectionView.reloadData()
-//                print("executed")
+ //           }
+  //      }
+                self.db.collection("Categories").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                    var id = 0
+                    var name = ""
+                    var photourl = ""
+                    for document in querySnapshot!.documents {
+                        let categoryData = document.data()
+                        for data in categoryData{
+                            if data.key == "id"{
+                                id = data.value as! Int
+                            }
+                            if data.key == "name"{
+                                name = data.value as! String
+                            }
+                            if data.key == "photourl"{
+                                photourl = data.value as! String
+                            }
+
+                        }
+                       // let category = Category(id:id,name:name,photourl:photourl)
+                       // ModelManager.shared.categories.append(category)
+
+                    }
+//                    for i in 2...ModelManager.shared.categories.count + 2 {
+//                        let indexPath = IndexPath(row: i, section: 0)
+//                        self.baseCollectionView.reloadItems(at: [indexPath])
+//                    }
+                }
+            }
+            self.homeActivityIndicator.stopAnimating()
+            self.homeActivityIndicator.isHidden = true
             }
         }
-//        db.collection("Categories").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                var id = 0
-//                var name = ""
-//                var photourl = ""
-//                for document in querySnapshot!.documents {
-//                    let categoryData = document.data()
-//                    for data in categoryData{
-//                        if data.key == "id"{
-//                            id = data.value as! Int
-//                        }
-//                        if data.key == "name"{
-//                            name = data.value as! String
-//                        }
-//                        if data.key == "photourl"{
-//                            photourl = data.value as! String
-//                        }
-//
-//                    }
-//                    let category = Category(id:id,name:name,photourl:photourl)
-////                    ModelManager.shared.categories.append(category)
-//
-//                }
-////                for i in 2...ModelManager.shared.categories.count + 2 {
-////                    let indexPath = IndexPath(row: i, section: 0)
-////                    self.baseCollectionView.reloadItems(at: [indexPath])
-////                }
-//            }
-//        }
-        
         
     }
     override func viewWillLayoutSubviews() {
