@@ -21,6 +21,9 @@ class HomeViewController: UIViewController {
     let categoriesColletionViewIdentifier = "categoryCell"
     let searchCollectionViewIdentifier = "searchCell"
     var bannersUrl = [String]()
+    var itemCount = 0
+    var finishBanner = false
+    var finishCategory = false
     
     
     override func viewDidLoad() {
@@ -39,55 +42,67 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         homeActivityIndicator.isHidden = false
         homeActivityIndicator.startAnimating()
-        db.collection("Banners").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                var id = 0
-                var name = ""
-                var photourl = ""
-                var idBarraca = 0
-                for document in querySnapshot!.documents {
-                    let bannerData = document.data()
-                    for data in bannerData{
-                        if data.key == "id"{
-                            id = data.value as! Int
-                        }
-                        if data.key == "name"{
-                            name = data.value as! String
-                        }
-                        if data.key == "photourl"{
-                            photourl = data.value as! String
-                        }
-                        if data.key == "idBarraca"{
-                            idBarraca = data.value as! Int
-                        }
-                    }
-                    let bannner = Banners(name: name, id:id ,photourl:photourl,idBarraca:idBarraca)
-                    ModelManager.shared.banners.append(bannner)
-
-                }
-
+        self.itemCount = 0
+        getBanner(db: db) { (finishBanner) in
+            if finishBanner{
                 for b in ModelManager.shared.banners {
                     self.bannersUrl.append(b.photourl)
                 }
+                self.itemCount += 2
+                self.finishBanner = finishBanner
+                
+                self.getCategory(db: self.db) { (finishCategory) in
+                    if finishCategory{
+                        self.itemCount += ModelManager.shared.categories.count
+                    }
+                    self.finishCategory = finishCategory
+                    self.baseCollectionView.reloadData()
+                    if finishCategory && finishBanner {
+                        let indexPath = IndexPath(row:0, section: 0)
+                        self.baseCollectionView.reloadItems(at: [indexPath])
+                        var arrayOfIndex = [IndexPath]()
+                        for i in 2...ModelManager.shared.categories.count + 1{
+                            let indexPath = IndexPath(row: i, section: 0)
+                            arrayOfIndex.append(indexPath)
+                        }
+                        self.baseCollectionView.reloadItems(at: arrayOfIndex)
+                        self.homeActivityIndicator.stopAnimating()
+                        self.homeActivityIndicator.isHidden = true
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    
+    
+    override func viewWillLayoutSubviews() {
+//        bannerColletionView.layer.masksToBounds = true
+//        bannerColletionView.layer.cornerRadius = 12
+//        categoriesSearchBar.layer.masksToBounds = true
+//        categoriesSearchBar.layer.cornerRadius = 12
+//        categoriesColletionView.layer.masksToBounds = true
+//        categoriesColletionView.layer.cornerRadius = 12
+    }
+    
+    
 
-                let indexPath = IndexPath(row:0, section: 0)
-                self.baseCollectionView.reloadItems(at: [indexPath])
+        func getBanner(db : Firestore , completionHandler: @escaping (Bool) -> Void){
 
-
- //           }
-  //      }
-                self.db.collection("Categories").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
+            var result = false
+            db.collection("Banners").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    completionHandler(result)
+                } else {
                     var id = 0
                     var name = ""
                     var photourl = ""
+                    var idBarraca = 0
                     for document in querySnapshot!.documents {
-                        let categoryData = document.data()
-                        for data in categoryData{
+                        let bannerData = document.data()
+                        for data in bannerData{
                             if data.key == "id"{
                                 id = data.value as! Int
                             }
@@ -97,31 +112,59 @@ class HomeViewController: UIViewController {
                             if data.key == "photourl"{
                                 photourl = data.value as! String
                             }
-
+                            if data.key == "idBarraca"{
+                                idBarraca = data.value as! Int
+                            }
                         }
-                       // let category = Category(id:id,name:name,photourl:photourl)
-                       // ModelManager.shared.categories.append(category)
-
+                        if !(ModelManager.shared.banners.contains(where: { $0.id == id })){
+                            let bannner = Banners(name: name, id:id ,photourl:photourl,idBarraca:idBarraca)
+                            ModelManager.shared.banners.append(bannner)
+                        }
+                        
                     }
-//                    for i in 2...ModelManager.shared.categories.count + 2 {
-//                        let indexPath = IndexPath(row: i, section: 0)
-//                        self.baseCollectionView.reloadItems(at: [indexPath])
-//                    }
+                    result = true
+                    completionHandler(result)
                 }
             }
-            self.homeActivityIndicator.stopAnimating()
-            self.homeActivityIndicator.isHidden = true
+        }
+    
+    func getCategory(db : Firestore, completionHandler: @escaping (Bool) -> Void){
+        var result = false
+        db.collection("Categories").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completionHandler(result)
+            } else {
+                var id = 0
+                var name = ""
+                var photourl = ""
+                for document in querySnapshot!.documents {
+                    let categoryData = document.data()
+                    for data in categoryData{
+                        if data.key == "id"{
+                            id = data.value as! Int
+                        }
+                        if data.key == "name"{
+                            name = data.value as! String
+                        }
+                        if data.key == "photourl"{
+                            photourl = data.value as! String
+                        }
+                        
+                    }
+                    print("id" + "\(id)")
+                    print("Model manager " + "\(ModelManager.shared.categories.contains(where: { $0.id == id }))")
+                    if !(ModelManager.shared.categories.contains(where: { $0.id == id })){
+                        print("entro " + "\(id)")
+                        let category = Category(id:id,name:name,photourl:photourl)
+                        ModelManager.shared.categories.append(category)
+                    }
+                }
+                result = true
+                completionHandler(result)
+
             }
         }
-        
-    }
-    override func viewWillLayoutSubviews() {
-//        bannerColletionView.layer.masksToBounds = true
-//        bannerColletionView.layer.cornerRadius = 12
-//        categoriesSearchBar.layer.masksToBounds = true
-//        categoriesSearchBar.layer.cornerRadius = 12
-//        categoriesColletionView.layer.masksToBounds = true
-//        categoriesColletionView.layer.cornerRadius = 12
     }
 
 }
@@ -132,7 +175,8 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
 //        if collectionView == bannerColletionView{
 //            return ModelManager.shared.banners.count
 //        }
-        return ModelManager.shared.categories.count + 2
+       // return ModelManager.shared.categories.count + 2
+        return itemCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,7 +197,10 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         else
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoriesColletionViewIdentifier, for: indexPath) as! CategoriesCollectionViewCell
-            let category = ModelManager.shared.categories[indexPath.row - 2]
+            
+            let inxPath = indexPath.row - 2
+            print("index path row " + "\(inxPath)")
+            let category = ModelManager.shared.categories[inxPath]
             
             cell.layer.masksToBounds = true
             cell.layer.cornerRadius = 12
