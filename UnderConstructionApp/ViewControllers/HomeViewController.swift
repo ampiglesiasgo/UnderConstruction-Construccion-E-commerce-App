@@ -152,10 +152,7 @@ class HomeViewController: UIViewController {
                         }
                         
                     }
-                    print("id" + "\(id)")
-                    print("Model manager " + "\(ModelManager.shared.categories.contains(where: { $0.id == id }))")
                     if !(ModelManager.shared.categories.contains(where: { $0.id == id })){
-                        print("entro " + "\(id)")
                         let category = Category(id:id,name:name,photourl:photourl)
                         ModelManager.shared.categories.append(category)
                     }
@@ -183,6 +180,11 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
       if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bannerColletionViewIdentifier, for: indexPath) as! BaseCollectionViewCell
             cell.configure(imageUrls: bannersUrl)
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 12
+            cell.bannerCollectionView.layer.masksToBounds = true
+            cell.bannerCollectionView.layer.cornerRadius = 12
+
 //            cell.bannerCollectionView.reloadData()
             return cell
         }
@@ -199,7 +201,6 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoriesColletionViewIdentifier, for: indexPath) as! CategoriesCollectionViewCell
             
             let inxPath = indexPath.row - 2
-            print("index path row " + "\(inxPath)")
             let category = ModelManager.shared.categories[inxPath]
             
             cell.layer.masksToBounds = true
@@ -215,7 +216,7 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
-            return CGSize(width: baseCollectionView.frame.size.width , height: 150)
+            return CGSize(width: baseCollectionView.frame.size.width , height: 170)
         }
         if indexPath.row == 1 {
             return CGSize(width: baseCollectionView.frame.size.width , height: 56)

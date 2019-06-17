@@ -15,7 +15,6 @@ class BaseCollectionViewCell: UICollectionViewCell {
     let bannerColletionViewIdentifier = "bannerCell"
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awakeFromNib")
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
     }
@@ -31,7 +30,6 @@ class BaseCollectionViewCell: UICollectionViewCell {
 extension BaseCollectionViewCell : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(imageUrls.count)
         return imageUrls.count
     }
     
