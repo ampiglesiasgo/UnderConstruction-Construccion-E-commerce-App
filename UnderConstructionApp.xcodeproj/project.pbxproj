@@ -13,6 +13,10 @@
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
 		B954E29622AB2D9C00170141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954E29522AB2D9C00170141 /* Assets.xcassets */; };
 		B954E29922AB2D9C00170141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */; };
+		B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */; };
+		B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */; };
+		B96BF50422B73B63008B93EC /* Barraca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50322B73B63008B93EC /* Barraca.swift */; };
+		B96BF50622B73C1B008B93EC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50522B73C1B008B93EC /* Product.swift */; };
 		B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */; };
 		B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC222B1C00600A0ECBA /* Category.swift */; };
 		B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC722B1DE9400A0ECBA /* SearchCollectionViewCell.swift */; };
@@ -36,6 +40,10 @@
 		B954E29522AB2D9C00170141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B954E29822AB2D9C00170141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B954E29A22AB2D9C00170141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewController.swift; sourceTree = "<group>"; };
+		B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewCell.swift; sourceTree = "<group>"; };
+		B96BF50322B73B63008B93EC /* Barraca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barraca.swift; sourceTree = "<group>"; };
+		B96BF50522B73C1B008B93EC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B96D9AC222B1C00600A0ECBA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B96D9AC722B1DE9400A0ECBA /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +140,8 @@
 				B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */,
 				B96D9AC722B1DE9400A0ECBA /* SearchCollectionViewCell.swift */,
 				B9F86CFD22B30EEF00628463 /* BaseCollectionViewCell.swift */,
+				B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */,
+				B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			children = (
 				B9C471F922AF51B100918EAE /* Banners.swift */,
 				B96D9AC222B1C00600A0ECBA /* Category.swift */,
+				B96BF50322B73B63008B93EC /* Barraca.swift */,
+				B96BF50522B73C1B008B93EC /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,12 +299,16 @@
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */,
 				B9C471FA22AF51B100918EAE /* Banners.swift in Sources */,
+				B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */,
 				B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */,
 				B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */,
 				B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */,
+				B96BF50422B73B63008B93EC /* Barraca.swift in Sources */,
+				B96BF50622B73C1B008B93EC /* Product.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B954E29122AB2D9C00170141 /* ViewController.swift in Sources */,
 				B9F86CFE22B30EEF00628463 /* BaseCollectionViewCell.swift in Sources */,
+				B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */,
 				B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */,
 				B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */,
 			);

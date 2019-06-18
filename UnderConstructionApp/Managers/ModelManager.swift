@@ -17,6 +17,8 @@ class ModelManager {
     static let shared = ModelManager()
     var banners = [Banners]()
     var categories = [Category]()
+    var barracas = [Barraca]()
+    var productos = [Product]()
     
     
 

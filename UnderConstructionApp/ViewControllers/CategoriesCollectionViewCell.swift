@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol CategoriesCollectionViewCellDelegate {
+    func didTapCategory(_ sender: CategoriesCollectionViewCell, category : String)
+}
+
 class CategoriesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    var delegate : CategoriesCollectionViewCell?
+
 }

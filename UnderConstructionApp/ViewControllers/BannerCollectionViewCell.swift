@@ -12,8 +12,4 @@ class BannerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bannerImage: UIImageView!
     
-    
-    override func layoutSubviews() {
-        bannerImage.layer.cornerRadius = 12
-    }
 }
