@@ -704,16 +704,17 @@
                     <connections>
                         <outlet property="cameraButton" destination="sLk-Ln-Fsw" id="Ygy-zh-LRD"/>
                         <outlet property="libraryButton" destination="rpt-3X-PlP" id="dqr-aQ-kzD"/>
+                        <segue destination="J6F-BO-fNd" kind="show" identifier="photoResultSegue" id="D8i-rw-YMo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qie-EC-nHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="-36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Result View Controller-->
         <scene sceneID="xNC-dy-RAi">
             <objects>
-                <viewController id="J6F-BO-fNd" sceneMemberID="viewController">
+                <viewController id="J6F-BO-fNd" customClass="PhotoResultViewController" customModule="UnderConstructionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KVO-tU-WJ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -738,6 +739,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Btx-4P-0so"/>
                     </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="QdM-Wa-hI0" id="5MV-f3-OEr"/>
+                        <outlet property="photoResultaImageView" destination="f0X-rk-bG2" id="Y4j-Xa-cNp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCq-Ru-nee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

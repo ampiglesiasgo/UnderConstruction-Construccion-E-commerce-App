@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5663C4DE66EDE82A2C8A368D /* Pods_UnderConstructionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA76D35D00D3E3FACE54D4D1 /* Pods_UnderConstructionApp.framework */; };
+		B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B90B216D22BAE25700EBE529 /* Inceptionv3.mlmodel */; };
+		B90B217022BAE69B00EBE529 /* PhotoResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */; };
 		B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E28E22AB2D9C00170141 /* AppDelegate.swift */; };
 		B954E29122AB2D9C00170141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E29022AB2D9C00170141 /* ViewController.swift */; };
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		0F3013F6D8624BAD486C4644 /* Pods-UnderConstructionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnderConstructionApp.debug.xcconfig"; path = "Target Support Files/Pods-UnderConstructionApp/Pods-UnderConstructionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		32ADA9D59A071469637A3017 /* Pods-UnderConstructionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnderConstructionApp.release.xcconfig"; path = "Target Support Files/Pods-UnderConstructionApp/Pods-UnderConstructionApp.release.xcconfig"; sourceTree = "<group>"; };
+		B90B216D22BAE25700EBE529 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResultViewController.swift; sourceTree = "<group>"; };
 		B954E28B22AB2D9C00170141 /* UnderConstructionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderConstructionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954E28E22AB2D9C00170141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B954E29022AB2D9C00170141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		B954E28222AB2D9C00170141 = {
 			isa = PBXGroup;
 			children = (
+				B90B216D22BAE25700EBE529 /* Inceptionv3.mlmodel */,
 				B954E28D22AB2D9C00170141 /* UnderConstructionApp */,
 				B954E28C22AB2D9C00170141 /* Products */,
 				2267515453F75144EB0E964D /* Pods */,
@@ -145,6 +150,7 @@
 				B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */,
 				B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */,
 				B989567422BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift */,
+				B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,9 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */,
+				B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */,
 				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */,
+				B90B217022BAE69B00EBE529 /* PhotoResultViewController.swift in Sources */,
 				B9C471FA22AF51B100918EAE /* Banners.swift in Sources */,
 				B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */,
 				B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */,
