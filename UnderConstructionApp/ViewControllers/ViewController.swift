@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.HideKeyboard()
+        
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -87,3 +90,20 @@ extension UIView {
         layer.cornerRadius = 8
     }
 }
+
+extension ViewController {
+    
+    func HideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
+}
+
+
+

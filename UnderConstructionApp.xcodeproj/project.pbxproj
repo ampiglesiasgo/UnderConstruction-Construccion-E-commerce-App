@@ -20,6 +20,7 @@
 		B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */; };
 		B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC222B1C00600A0ECBA /* Category.swift */; };
 		B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D9AC722B1DE9400A0ECBA /* SearchCollectionViewCell.swift */; };
+		B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B989567422BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift */; };
 		B9C471ED22ACE87600918EAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */; };
 		B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471EE22ADA01500918EAE /* RegisterViewController.swift */; };
 		B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C471F022ADA47D00918EAE /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 		B96D9AC022B1B16400A0ECBA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B96D9AC222B1C00600A0ECBA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B96D9AC722B1DE9400A0ECBA /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		B989567422BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoShootOrLibraryViewController.swift; sourceTree = "<group>"; };
 		B9C471EC22ACE87600918EAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B9C471EE22ADA01500918EAE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B9C471F022ADA47D00918EAE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				B9F86CFD22B30EEF00628463 /* BaseCollectionViewCell.swift */,
 				B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */,
 				B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */,
+				B989567422BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */,
 				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */,

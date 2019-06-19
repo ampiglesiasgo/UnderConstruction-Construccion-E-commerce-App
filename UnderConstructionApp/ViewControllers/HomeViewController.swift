@@ -31,6 +31,8 @@ class HomeViewController: UIViewController {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        
+        self.HideKeyboard()
 
     }
 
@@ -239,6 +241,19 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
 }
 
+extension HomeViewController {
+    
+    func HideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
+}
 
 
 

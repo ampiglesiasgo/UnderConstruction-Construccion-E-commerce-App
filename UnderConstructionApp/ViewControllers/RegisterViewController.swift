@@ -18,8 +18,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerBackView: UIView!
     
     @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.HideKeyboard()
 
         // Do any additional setup after loading the view.
     }
@@ -67,5 +69,19 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+}
+
+extension RegisterViewController {
+    
+    func HideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
 }
 
