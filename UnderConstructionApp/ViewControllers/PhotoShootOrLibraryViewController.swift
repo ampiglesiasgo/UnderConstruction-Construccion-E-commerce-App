@@ -115,7 +115,7 @@ extension PhotoShootOrLibraryViewController: UIImagePickerControllerDelegate {
         Translation.shared.Translate(phrase: prediction.classLabel, toLang: "es"){
             (String) in
                 let translatedText = String
-                self.classifier = "Creo que es un \(translatedText)."
+                self.classifier = "Creo que es un/a \(translatedText)."
                 self.performSegue(withIdentifier: "photoResultSegue", sender: self)
 
         }
