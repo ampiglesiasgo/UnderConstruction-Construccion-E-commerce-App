@@ -1,0 +1,6 @@
+framework module Pods_UnderConstructionApp {
+  umbrella header "Pods-UnderConstructionApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

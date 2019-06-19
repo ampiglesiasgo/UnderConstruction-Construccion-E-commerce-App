@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1064045682571-n3finflt9o12kbnmbjjndgjpj4g583f9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1064045682571-n3finflt9o12kbnmbjjndgjpj4g583f9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCMtp1KnGP__vpXOZDxW53afEj3THU7hLI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1064045682571</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Amparo.UnderConstructionApp</string>
+	<key>PROJECT_ID</key>
+	<string>underconstructionapp-578d2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>underconstructionapp-578d2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1064045682571:ios:0eaf6d37a8ce57fc</string>
+	<key>DATABASE_URL</key>
+	<string>https://underconstructionapp-578d2.firebaseio.com</string>
+</dict>
+</plist>
