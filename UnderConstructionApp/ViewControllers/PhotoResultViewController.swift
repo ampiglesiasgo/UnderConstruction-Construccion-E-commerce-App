@@ -13,6 +13,9 @@ class PhotoResultViewController: UIViewController {
     @IBOutlet weak var photoResultaImageView: UIImageView!
     @IBOutlet weak var classificationLabel: UILabel!
     
+    @IBOutlet weak var photoResultActivityIndicator: UIActivityIndicatorView!
+
+    
     var photoImageResult = UIImage()
     var classifierResult = ""
     
@@ -28,8 +31,21 @@ class PhotoResultViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        classificationLabel.text = classifierResult
-        photoResultaImageView.image = photoImageResult
+        photoResultActivityIndicator.startAnimating()
+        classificationLabel.isHidden = true
+        Translation.shared.Translate(phrase: classifierResult, toLang: "es") { (translate) in
+            DispatchQueue.main.async {
+                self.classificationLabel.isHidden = false
+                self.classificationLabel.text = translate
+                self.photoResultaImageView.image = self.photoImageResult
+                self.photoResultActivityIndicator.stopAnimating()
+                self.photoResultActivityIndicator.isHidden = true
+            }
+
+            
+        }
+        
+        
     }
     
 
