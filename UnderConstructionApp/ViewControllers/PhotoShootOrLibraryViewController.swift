@@ -112,7 +112,7 @@ extension PhotoShootOrLibraryViewController: UIImagePickerControllerDelegate {
             return
         }
         
-        self.classifier = "Creo que es un/a \(prediction.classLabel)."
+        self.classifier = prediction.classLabel
         self.performSegue(withIdentifier: "photoResultSegue", sender: self)
     }
     

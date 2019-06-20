@@ -36,7 +36,7 @@ class PhotoResultViewController: UIViewController {
         Translation.shared.Translate(phrase: classifierResult, toLang: "es") { (translate) in
             DispatchQueue.main.async {
                 self.classificationLabel.isHidden = false
-                self.classificationLabel.text = translate
+                self.classificationLabel.text = "Creo que es un/a \(translate)."
                 self.photoResultaImageView.image = self.photoImageResult
                 self.photoResultActivityIndicator.stopAnimating()
                 self.photoResultActivityIndicator.isHidden = true
