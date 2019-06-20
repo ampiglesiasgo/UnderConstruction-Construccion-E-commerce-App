@@ -14,7 +14,9 @@ class PhotoResultViewController: UIViewController {
     @IBOutlet weak var classificationLabel: UILabel!
     
     @IBOutlet weak var photoResultActivityIndicator: UIActivityIndicatorView!
-
+    
+    @IBOutlet weak var buyProductButton: UIButton!
+    
     
     var photoImageResult = UIImage()
     var classifierResult = ""
@@ -33,30 +35,24 @@ class PhotoResultViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         photoResultActivityIndicator.startAnimating()
         classificationLabel.isHidden = true
+        buyProductButton.isHidden = true
         Translation.shared.Translate(phrase: classifierResult, toLang: "es") { (translate) in
             DispatchQueue.main.async {
                 self.classificationLabel.isHidden = false
+                self.buyProductButton.isHidden = false
                 self.classificationLabel.text = "Creo que es un/a \(translate)."
                 self.photoResultaImageView.image = self.photoImageResult
                 self.photoResultActivityIndicator.stopAnimating()
                 self.photoResultActivityIndicator.isHidden = true
             }
-
-            
         }
-        
-        
     }
     
+    override func viewWillLayoutSubviews() {
+        buyProductButton.layer.cornerRadius = 15
+        buyProductButton.clipsToBounds = true
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

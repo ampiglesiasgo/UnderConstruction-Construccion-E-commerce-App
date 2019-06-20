@@ -725,34 +725,44 @@
                                     <constraint firstAttribute="width" secondItem="f0X-rk-bG2" secondAttribute="height" multiplier="1:1" id="v9a-74-kuY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdM-Wa-hI0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdM-Wa-hI0">
                                 <rect key="frame" x="69" y="425" width="236" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-2s-oOh">
-                                <rect key="frame" x="164" y="540" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cR6-tR-PTV">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-qn-uYe">
+                                <rect key="frame" x="90" y="540" width="195" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Comprar Producto"/>
+                                <connections>
+                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="aQo-f4-0Xr"/>
+                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLf-i8-bi6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2IW-qn-uYe" firstAttribute="top" secondItem="QdM-Wa-hI0" secondAttribute="bottom" constant="90" id="DON-dK-eLc"/>
                             <constraint firstItem="f0X-rk-bG2" firstAttribute="top" secondItem="Btx-4P-0so" secondAttribute="top" constant="60" id="MFH-nV-4iQ"/>
                             <constraint firstItem="f0X-rk-bG2" firstAttribute="leading" secondItem="Btx-4P-0so" secondAttribute="leading" constant="60" id="Vfc-c9-eHg"/>
+                            <constraint firstItem="2IW-qn-uYe" firstAttribute="centerX" secondItem="Btx-4P-0so" secondAttribute="centerX" id="Zu6-N4-4Ne"/>
                             <constraint firstItem="QdM-Wa-hI0" firstAttribute="trailing" secondItem="f0X-rk-bG2" secondAttribute="trailing" id="kmL-VV-ggl"/>
                             <constraint firstItem="QdM-Wa-hI0" firstAttribute="leading" secondItem="f0X-rk-bG2" secondAttribute="leading" id="r7S-ck-OhK"/>
                             <constraint firstItem="QdM-Wa-hI0" firstAttribute="top" secondItem="f0X-rk-bG2" secondAttribute="bottom" constant="45" id="ttU-TX-9Od"/>
                             <constraint firstItem="f0X-rk-bG2" firstAttribute="centerX" secondItem="Btx-4P-0so" secondAttribute="centerX" id="uF9-wi-iFk"/>
+                            <constraint firstItem="2IW-qn-uYe" firstAttribute="leading" secondItem="f0X-rk-bG2" secondAttribute="leading" id="vnv-e9-8mc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Btx-4P-0so"/>
                     </view>
                     <connections>
+                        <outlet property="buyProductButton" destination="2IW-qn-uYe" id="p4K-5H-fGA"/>
                         <outlet property="classificationLabel" destination="QdM-Wa-hI0" id="5MV-f3-OEr"/>
                         <outlet property="photoResultActivityIndicator" destination="cR6-tR-PTV" id="Kru-Zu-Qz3"/>
                         <outlet property="photoResultaImageView" destination="f0X-rk-bG2" id="Y4j-Xa-cNp"/>
@@ -984,7 +994,7 @@
         <image name="usuario" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wub-pM-hWT"/>
-        <segue reference="bcT-yV-Wuq"/>
+        <segue reference="4YU-rn-3QO"/>
+        <segue reference="GOj-34-Pew"/>
     </inferredMetricsTieBreakers>
 </document>
