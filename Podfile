@@ -10,5 +10,5 @@ target 'UnderConstructionApp' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Firestore'
-	pod 'Kingfisher', '4.0'
+	pod 'Kingfisher'
 end

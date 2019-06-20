@@ -16,6 +16,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     @IBOutlet weak var barracasTableView: UITableView!
     var db: Firestore!
     var classifierResult = ""
+    var filterBarracas = false
 
 
 
@@ -105,34 +106,52 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         }
                     }
                 result = true
+                ModelManager.shared.filteredBarracas = [Barraca]()
+                for p in ModelManager.shared.productos{
+                    if p.name.uppercased().contains(self.classifierResult.uppercased()){
+                        for b in ModelManager.shared.barracas {
+                            if b.products.contains(where: { $0.id == p.id }){
+                                ModelManager.shared.filteredBarracas.append(b)
+                            }
+                        }
+                        self.filterBarracas = true
+                        
+                    }
+                }
+                
                 completionHandler(result)
                 }
-            for p in ModelManager.shared.productos{
-                print(p.name.uppercased())
-                print(self.classifierResult.uppercased())
-                if p.name.uppercased().contains(self.classifierResult.uppercased()){
-                    print(p)
-                }
-            }
         }
-        
-        
     }
     
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if filterBarracas{
+           return ModelManager.shared.filteredBarracas.count
+        }
         return ModelManager.shared.barracas.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "barracaCell", for : indexPath) as! BarracasTableViewCell
-        let barraca = ModelManager.shared.barracas[indexPath.row]
-        cell.barracaNameLabel.text = barraca.name
-        cell.barracaAddressLabel.text = barraca.address
-        cell.barracaDetailsLabel.text = barraca.details
-        cell.barracasPhotoImageView.kf.setImage(with: URL(string: barraca.photourl))
+
+        if filterBarracas{
+            let barraca =  ModelManager.shared.filteredBarracas[indexPath.row]
+            cell.barracaNameLabel.text = barraca.name
+            cell.barracaAddressLabel.text = barraca.address
+            cell.barracaDetailsLabel.text = barraca.details
+            cell.barracasPhotoImageView.kf.setImage(with: URL(string: barraca.photourl))
+        }
+        else {
+            let barraca = ModelManager.shared.barracas[indexPath.row]
+            cell.barracaNameLabel.text = barraca.name
+            cell.barracaAddressLabel.text = barraca.address
+            cell.barracaDetailsLabel.text = barraca.details
+            cell.barracasPhotoImageView.kf.setImage(with: URL(string: barraca.photourl))
+        }
+        
         
         return cell
     }
