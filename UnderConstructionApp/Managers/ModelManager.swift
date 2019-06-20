@@ -19,6 +19,8 @@ class ModelManager {
     var categories = [Category]()
     var barracas = [Barraca]()
     var productos = [Product]()
+    var filteredBarracas = [Barraca]()
+
     
     
 

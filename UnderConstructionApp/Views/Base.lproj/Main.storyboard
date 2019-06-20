@@ -742,6 +742,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Comprar Producto"/>
                                 <connections>
+                                    <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="ddV-qx-FDb"/>
                                     <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="aQo-f4-0Xr"/>
                                     <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLf-i8-bi6"/>
                                 </connections>
@@ -766,6 +767,7 @@
                         <outlet property="classificationLabel" destination="QdM-Wa-hI0" id="5MV-f3-OEr"/>
                         <outlet property="photoResultActivityIndicator" destination="cR6-tR-PTV" id="Kru-Zu-Qz3"/>
                         <outlet property="photoResultaImageView" destination="f0X-rk-bG2" id="Y4j-Xa-cNp"/>
+                        <segue destination="5Xq-SF-pzA" kind="show" identifier="buyProductSegue" id="6xs-oa-Eow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCq-Ru-nee" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -995,6 +997,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4YU-rn-3QO"/>
+        <segue reference="6xs-oa-Eow"/>
         <segue reference="GOj-34-Pew"/>
     </inferredMetricsTieBreakers>
 </document>

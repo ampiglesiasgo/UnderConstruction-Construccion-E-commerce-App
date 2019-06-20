@@ -13,6 +13,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     var imageUrls = [String]()
     let bannerColletionViewIdentifier = "bannerCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         bannerCollectionView.delegate = self

@@ -15,6 +15,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     
     @IBOutlet weak var barracasTableView: UITableView!
     var db: Firestore!
+    var classifierResult = ""
+
 
 
     override func viewDidLoad() {
@@ -86,7 +88,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                                                        price : data.value(forKey: "price") as! Double)
                                     
                                     ModelManager.shared.productos.append(prod)
-                                    print("prod " + "\(ModelManager.shared.productos.count)")
+                                   // print("prod " + "\(ModelManager.shared.productos.count)")
                                     products.append(prod)
                                 }
                                 
@@ -98,13 +100,20 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         let barraca = Barraca(id:id,name:name,photourl:photourl,address : address, details : details, products : products)
                         
                         ModelManager.shared.barracas.append(barraca)
-                        print("barraca " + "\(ModelManager.shared.barracas.count)")
+                       // print("barraca " + "\(ModelManager.shared.barracas.count)")
                         
                         }
                     }
                 result = true
                 completionHandler(result)
                 }
+            for p in ModelManager.shared.productos{
+                print(p.name)
+                print(self.classifierResult)
+                if p.name.contains(self.classifierResult){
+                    print(p)
+                }
+            }
         }
         
         

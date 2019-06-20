@@ -41,6 +41,7 @@ class PhotoResultViewController: UIViewController {
                 self.classificationLabel.isHidden = false
                 self.buyProductButton.isHidden = false
                 self.classificationLabel.text = "Creo que es un/a \(translate)."
+                self.classifierResult = translate
                 self.photoResultaImageView.image = self.photoImageResult
                 self.photoResultActivityIndicator.stopAnimating()
                 self.photoResultActivityIndicator.isHidden = true
@@ -52,6 +53,23 @@ class PhotoResultViewController: UIViewController {
         buyProductButton.layer.cornerRadius = 15
         buyProductButton.clipsToBounds = true
 
+    }
+    
+    
+    @IBAction func buyProductActionButton(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "buyProductSegue", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "buyProductSegue"{
+            let barracasTableViewController = (segue.destination as! BarracasTableViewController)
+            barracasTableViewController.classifierResult = classifierResult
+
+
+        }
     }
 
 

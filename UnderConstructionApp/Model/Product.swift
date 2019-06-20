@@ -24,4 +24,5 @@ class Product {
         self.details = details
         self.price = price
     }
+    
 }
