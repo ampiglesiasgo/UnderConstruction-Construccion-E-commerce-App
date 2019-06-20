@@ -108,9 +108,9 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                 completionHandler(result)
                 }
             for p in ModelManager.shared.productos{
-                print(p.name)
-                print(self.classifierResult)
-                if p.name.contains(self.classifierResult){
+                print(p.name.uppercased())
+                print(self.classifierResult.uppercased())
+                if p.name.uppercased().contains(self.classifierResult.uppercased()){
                     print(p)
                 }
             }
