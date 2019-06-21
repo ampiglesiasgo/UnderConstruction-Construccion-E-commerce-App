@@ -17,6 +17,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     var db: Firestore!
     var classifierResult = ""
     var filterBarracas = false
+    var filterCategory = ""
 
 
 
@@ -108,14 +109,27 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                 result = true
                 ModelManager.shared.filteredBarracas = [Barraca]()
                 for p in ModelManager.shared.productos{
-                    if p.name.uppercased().contains(self.classifierResult.uppercased()){
-                        for b in ModelManager.shared.barracas {
-                            if b.products.contains(where: { $0.id == p.id }){
-                                ModelManager.shared.filteredBarracas.append(b)
+                    if !(self.classifierResult == ""){
+                        if p.name.uppercased().contains(self.classifierResult.uppercased()){
+                            for b in ModelManager.shared.barracas {
+                                if b.products.contains(where: { $0.id == p.id }){
+                                    ModelManager.shared.filteredBarracas.append(b)
+                                }
                             }
-                        }
                         self.filterBarracas = true
                         
+                    }
+                }
+                    if !(self.filterCategory == ""){
+                        if p.category.uppercased().contains(self.filterCategory.uppercased()){
+                            for b in ModelManager.shared.barracas {
+                                if b.products.contains(where: { $0.id == p.id }){
+                                    ModelManager.shared.filteredBarracas.append(b)
+                                }
+                            }
+                            self.filterBarracas = true
+                            
+                        }
                     }
                 }
                 

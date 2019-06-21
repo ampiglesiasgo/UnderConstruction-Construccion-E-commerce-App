@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
     var finishCategory = false
     var filteredTableData = [Category]()
     var searching = false
+    var filterCategory = ""
     
     
     override func viewDidLoad() {
@@ -254,6 +255,28 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
         return 0.0
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if !(indexPath.row == 0 || indexPath.row == 1){
+            let cell = baseCollectionView.cellForItem(at: indexPath) as! CategoriesCollectionViewCell
+            filterCategory = cell.categoryLabel.text!
+            
+            self.performSegue(withIdentifier: "categorySegue", sender: self)
+        }
+    }
+        
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            if segue.identifier == "categorySegue"{
+                let barracasTableViewController = (segue.destination as! BarracasTableViewController)
+                barracasTableViewController.filterCategory = filterCategory
+                
+                
+            }
+        }
+
+    
 }
 
 extension HomeViewController {
@@ -299,6 +322,4 @@ extension HomeViewController : SearchCollectionViewCellDelegate {
     
     
 }
-
-
 
