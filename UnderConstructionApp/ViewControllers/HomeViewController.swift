@@ -275,8 +275,6 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
                 
             }
         }
-
-    
 }
 
 extension HomeViewController {
