@@ -288,7 +288,6 @@ extension HomeViewController {
         view.endEditing(true)
     }
     
-    
 }
 
 extension HomeViewController : SearchCollectionViewCellDelegate {
