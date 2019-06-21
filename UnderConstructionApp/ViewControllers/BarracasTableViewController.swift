@@ -132,7 +132,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         }
                     }
                 }
-                
+                self.filterCategory = ""
+                self.classifierResult = ""
                 completionHandler(result)
                 }
         }
