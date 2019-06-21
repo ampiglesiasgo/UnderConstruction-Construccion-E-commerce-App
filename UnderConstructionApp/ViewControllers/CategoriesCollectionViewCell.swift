@@ -17,5 +17,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     var delegate : CategoriesCollectionViewCell?
+    
+
 
 }

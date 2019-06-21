@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
     var itemCount = 0
     var finishBanner = false
     var finishCategory = false
+    var filteredTableData = [Category]()
+    var searching = false
     
     
     override func viewDidLoad() {
@@ -196,19 +198,32 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             cell.layer.cornerRadius = 12
             cell.collectionSearchBar.layer.masksToBounds = true
             cell.collectionSearchBar.layer.cornerRadius = 12
+            cell.delegate = self
             return cell
         }
         else
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoriesColletionViewIdentifier, for: indexPath) as! CategoriesCollectionViewCell
+            if searching{
+                let inxPath = indexPath.row - 2
+                let category = filteredTableData[inxPath]
+                
+                cell.layer.masksToBounds = true
+                cell.layer.cornerRadius = 12
+                cell.categoryLabel.text = category.name
+                cell.categoryImageView.kf.setImage(with: URL(string: category.photourl))
+            }
+            else {
+                let inxPath = indexPath.row - 2
+                let category = ModelManager.shared.categories[inxPath]
+                
+                cell.layer.masksToBounds = true
+                cell.layer.cornerRadius = 12
+                cell.categoryLabel.text = category.name
+                cell.categoryImageView.kf.setImage(with: URL(string: category.photourl))
+            }
             
-            let inxPath = indexPath.row - 2
-            let category = ModelManager.shared.categories[inxPath]
             
-            cell.layer.masksToBounds = true
-            cell.layer.cornerRadius = 12
-            cell.categoryLabel.text = category.name
-            cell.categoryImageView.kf.setImage(with: URL(string: category.photourl))
             
             return cell
         }
@@ -255,7 +270,35 @@ extension HomeViewController {
     
 }
 
+extension HomeViewController : SearchCollectionViewCellDelegate {
+    
+    func didTapSearchBar(cell: SearchCollectionViewCell, searchText: String) {
+        filteredTableData = []
+        var auxArray = [String]()
+        var searchItems = [String]()
+        for category in ModelManager.shared.categories{
+                auxArray.append(category.name)
+            }
+        
+        searchItems = auxArray.filter({$0.prefix(searchText.count) == searchText})
+            for txt in searchItems{
+                for category in ModelManager.shared.categories{
+                    if category.name == txt{
+                        filteredTableData.append(category)
 
+                }
+            }
+            searching = true
+            
+        }
+        itemCount = filteredTableData.count + 2 
+        baseCollectionView.reloadData()
+    }
+    
+    
+    
+    
+}
 
 
 
