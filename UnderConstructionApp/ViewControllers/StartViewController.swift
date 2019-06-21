@@ -35,19 +35,6 @@ class StartViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "toRegisterSegue"{
-//            let registerViewController = (segue.destination as! RegisterViewController)
-//
-//        }
-//        if segue.identifier == "loginToHomeSegue"{
-//            let homeViewController = (segue.destination as! HomeViewController)
-//
-//        }
-//    }
-
-    
     @IBAction func logInStartAction(_ sender: Any) {
         performSegue(withIdentifier: "startToLoginSegue", sender: self)
 
