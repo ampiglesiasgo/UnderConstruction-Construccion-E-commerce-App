@@ -30,9 +30,10 @@ class StartViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "startToHomeSegue", sender: self)
-        }
+//        if Auth.auth().currentUser != nil {
+//            print("Usuario " + "\(Auth.auth().currentUser?.email)")
+//            self.performSegue(withIdentifier: "startToHomeSegue", sender: self)
+//        }
     }
     
     @IBAction func logInStartAction(_ sender: Any) {
