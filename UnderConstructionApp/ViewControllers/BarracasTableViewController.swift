@@ -81,19 +81,17 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                             {
                                 let data = dataProduct as! NSDictionary
                                 let id_prod = data.value(forKey: "id") as! Int
+                                let prod = Product(id: data.value(forKey: "id") as! Int,
+                                                   name:data.value(forKey: "name") as! String,
+                                                   photourl:data.value(forKey: "photourl") as! String,
+                                                   category : data.value(forKey: "category") as! String,
+                                                   details : data.value(forKey: "details") as! String,
+                                                   price : data.value(forKey: "price") as! Double)
+                                products.append(prod)
                                 if !(ModelManager.shared.productos.contains(where: { $0.id == id_prod })){
-                                    let prod = Product(id: data.value(forKey: "id") as! Int,
-                                                       name:data.value(forKey: "name") as! String,
-                                                       photourl:data.value(forKey: "photourl") as! String,
-                                                       category : data.value(forKey: "category") as! String,
-                                                       details : data.value(forKey: "details") as! String,
-                                                       price : data.value(forKey: "price") as! Double)
-                                    
                                     ModelManager.shared.productos.append(prod)
-                                   // print("prod " + "\(ModelManager.shared.productos.count)")
-                                    products.append(prod)
+                                    
                                 }
-                                
                             }
                         }
                         
@@ -102,38 +100,36 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         let barraca = Barraca(id:id,name:name,photourl:photourl,address : address, details : details, products : products)
                         
                         ModelManager.shared.barracas.append(barraca)
-                       // print("barraca " + "\(ModelManager.shared.barracas.count)")
                         
+                        products = [Product]()
                         }
                     }
                 result = true
                 ModelManager.shared.filteredBarracas = [Barraca]()
-                for p in ModelManager.shared.productos{
-                    if !(self.classifierResult == ""){
-                        if p.name.uppercased().contains(self.classifierResult.uppercased()){
-                            for b in ModelManager.shared.barracas {
+                for b in ModelManager.shared.barracas {
+                    for p in b.products{
+                        if !(self.classifierResult == ""){
+                            if p.name.uppercased().contains(self.classifierResult.uppercased()){
                                 if b.products.contains(where: { $0.id == p.id }){
                                     ModelManager.shared.filteredBarracas.append(b)
                                 }
                             }
                         self.filterBarracas = true
-                        
-                    }
-                }
-                    if !(self.filterCategory == ""){
-                        if p.category.uppercased().contains(self.filterCategory.uppercased()){
-                            for b in ModelManager.shared.barracas {
-                                if b.products.contains(where: { $0.id == p.id }){
-                                    ModelManager.shared.filteredBarracas.append(b)
+                        }
+                        if !(self.filterCategory == ""){
+                            if p.category.uppercased().contains(self.filterCategory.uppercased()){
+                                //for b in ModelManager.shared.barracas {
+                                    if b.products.contains(where: { $0.id == p.id }){
+                                        ModelManager.shared.filteredBarracas.append(b)
+                                    }
                                 }
-                            }
                             self.filterBarracas = true
                             
                         }
                     }
                 }
-                self.filterCategory = ""
-                self.classifierResult = ""
+               self.filterCategory = ""
+               self.classifierResult = ""
                 completionHandler(result)
                 }
         }
