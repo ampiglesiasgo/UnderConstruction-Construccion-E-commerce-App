@@ -13,6 +13,7 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var startActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +31,17 @@ class StartViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
-//        if Auth.auth().currentUser != nil {
-//            print("Usuario " + "\(Auth.auth().currentUser?.email)")
-//            self.performSegue(withIdentifier: "startToHomeSegue", sender: self)
-//        }
+        startActivityIndicator.startAnimating()
+        logInButton.isHidden = true
+        registerButton.isHidden = true
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "startToHomeSegue", sender: self)
+        }
+        startActivityIndicator.stopAnimating()
+        startActivityIndicator.isHidden = true
+        logInButton.isHidden = false
+        registerButton.isHidden = false
+        
     }
     
     @IBAction func logInStartAction(_ sender: Any) {

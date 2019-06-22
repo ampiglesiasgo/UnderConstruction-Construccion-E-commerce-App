@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -53,6 +53,14 @@
                                     <action selector="registerStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="Kz6-aV-7l3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Psi-wU-9un">
+                                <rect key="frame" x="169" y="401" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Rtu-Yl-p41"/>
+                                    <constraint firstAttribute="height" constant="37" id="TLf-c0-Bjb"/>
+                                </constraints>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -62,18 +70,22 @@
                             <constraint firstItem="0Xi-9Y-JV3" firstAttribute="centerX" secondItem="YDE-83-nlL" secondAttribute="centerX" id="IDX-Ra-6QM"/>
                             <constraint firstItem="0zO-vz-La9" firstAttribute="top" secondItem="b3o-1r-qBr" secondAttribute="top" constant="25" id="Jlg-cX-gvj"/>
                             <constraint firstItem="BPe-7l-bke" firstAttribute="centerX" secondItem="0zO-vz-La9" secondAttribute="centerX" id="Klz-Hy-caU"/>
+                            <constraint firstItem="Psi-wU-9un" firstAttribute="top" secondItem="BPe-7l-bke" secondAttribute="bottom" constant="30" id="KnI-Ph-fTg"/>
+                            <constraint firstItem="Psi-wU-9un" firstAttribute="leading" secondItem="b3o-1r-qBr" secondAttribute="leading" constant="169" id="OUl-zI-lMi"/>
                             <constraint firstItem="BPe-7l-bke" firstAttribute="top" secondItem="0zO-vz-La9" secondAttribute="bottom" constant="45" id="P4G-SM-NLB"/>
                             <constraint firstItem="0zO-vz-La9" firstAttribute="centerX" secondItem="b3o-1r-qBr" secondAttribute="centerX" id="T82-cw-bBS"/>
                             <constraint firstItem="YDE-83-nlL" firstAttribute="centerX" secondItem="BPe-7l-bke" secondAttribute="centerX" id="UX0-ZB-Io9"/>
                             <constraint firstItem="BPe-7l-bke" firstAttribute="leading" secondItem="b3o-1r-qBr" secondAttribute="leading" constant="65" id="XHT-rw-lws"/>
                             <constraint firstItem="b3o-1r-qBr" firstAttribute="bottom" secondItem="0Xi-9Y-JV3" secondAttribute="bottom" constant="100" id="Y8c-LY-rHm"/>
                             <constraint firstItem="0Xi-9Y-JV3" firstAttribute="top" secondItem="YDE-83-nlL" secondAttribute="bottom" constant="50" id="di9-nH-mfY"/>
+                            <constraint firstItem="Psi-wU-9un" firstAttribute="centerX" secondItem="b3o-1r-qBr" secondAttribute="centerX" id="gmV-FO-NTq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b3o-1r-qBr"/>
                     </view>
                     <connections>
                         <outlet property="logInButton" destination="YDE-83-nlL" id="jET-aR-6j5"/>
                         <outlet property="registerButton" destination="0Xi-9Y-JV3" id="xx6-mA-dMx"/>
+                        <outlet property="startActivityIndicator" destination="Psi-wU-9un" id="6Na-de-4Mh"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startToLoginSegue" id="ScB-5s-Ct3"/>
                         <segue destination="zZu-Tq-nOT" kind="show" identifier="startToHomeSegue" id="4YU-rn-3QO"/>
                         <segue destination="Q0P-fd-Jdg" kind="show" identifier="startToRegisterSegue" id="GOj-34-Pew"/>
