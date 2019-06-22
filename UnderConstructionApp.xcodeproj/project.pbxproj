@@ -16,6 +16,7 @@
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
 		B954E29622AB2D9C00170141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B954E29522AB2D9C00170141 /* Assets.xcassets */; };
 		B954E29922AB2D9C00170141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29722AB2D9C00170141 /* LaunchScreen.storyboard */; };
+		B957C5E322BED7320033C0BD /* BarracaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E222BED7320033C0BD /* BarracaViewController.swift */; };
 		B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */; };
 		B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */; };
 		B96BF50422B73B63008B93EC /* Barraca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50322B73B63008B93EC /* Barraca.swift */; };
@@ -47,6 +48,7 @@
 		B954E29522AB2D9C00170141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B954E29822AB2D9C00170141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B954E29A22AB2D9C00170141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B957C5E222BED7320033C0BD /* BarracaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracaViewController.swift; sourceTree = "<group>"; };
 		B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewController.swift; sourceTree = "<group>"; };
 		B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewCell.swift; sourceTree = "<group>"; };
 		B96BF50322B73B63008B93EC /* Barraca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barraca.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */,
 				B989567422BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift */,
 				B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */,
+				B957C5E222BED7320033C0BD /* BarracaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				B9C471F722AE03AC00918EAE /* BannerCollectionViewCell.swift in Sources */,
 				B9C471F322ADCB3500918EAE /* StartViewController.swift in Sources */,
 				B96BF50422B73B63008B93EC /* Barraca.swift in Sources */,
+				B957C5E322BED7320033C0BD /* BarracaViewController.swift in Sources */,
 				B96BF50622B73C1B008B93EC /* Product.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B954E29122AB2D9C00170141 /* ViewController.swift in Sources */,

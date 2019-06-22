@@ -14,6 +14,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
 {
     
     @IBOutlet weak var barracasTableView: UITableView!
+    @IBOutlet weak var barracasNotFoundLabel: UILabel!
+    
     var db: Firestore!
     var classifierResult = ""
     var filterBarracas = false
@@ -26,6 +28,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        self.title = "Barracas"
 
         // Do any additional setup after loading the view.
     }
@@ -38,7 +41,17 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     override func viewWillAppear(_ animated: Bool) {
         getBarraca(db: db) { (finishBarraca) in
             if finishBarraca{
-                self.barracasTableView.reloadData()            }
+                if self.filterBarracas && (ModelManager.shared.filteredBarracas.count == 0){
+                    self.barracasTableView.isHidden = true
+                    self.barracasNotFoundLabel.text = "No existe barraca que venda el producto que ud busca"
+
+                }
+                else{
+                    self.barracasTableView.reloadData()
+                }
+                
+            }
+            else{self.barracasTableView.reloadData()}
         }
     }
     
@@ -139,6 +152,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if filterBarracas{
+            if ModelManager.shared.filteredBarracas.count == 0{return 1}
            return ModelManager.shared.filteredBarracas.count
         }
         return ModelManager.shared.barracas.count
@@ -154,6 +168,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
             cell.barracaAddressLabel.text = barraca.address
             cell.barracaDetailsLabel.text = barraca.details
             cell.barracasPhotoImageView.kf.setImage(with: URL(string: barraca.photourl))
+            
+
         }
         else {
             let barraca = ModelManager.shared.barracas[indexPath.row]
