@@ -784,7 +784,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ivD-6F-Z8D">
                                                     <rect key="frame" x="10" y="10" width="146" height="146"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ivD-6F-Z8D" secondAttribute="height" multiplier="1:1" id="o1p-mk-EYJ"/>
+                                                        <constraint firstAttribute="width" secondItem="ivD-6F-Z8D" secondAttribute="height" multiplier="1:1" id="6fr-YP-0h6"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42V-kr-efX">
@@ -802,15 +802,15 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="centerX" secondItem="Boe-0f-4y9" secondAttribute="centerX" id="1Nn-Ls-Ojf"/>
-                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="top" secondItem="Boe-0f-4y9" secondAttribute="top" constant="10" id="2pT-wT-xV3"/>
                                             <constraint firstItem="42V-kr-efX" firstAttribute="leading" secondItem="dOH-Ia-cyh" secondAttribute="leading" id="8ed-tA-gJz"/>
-                                            <constraint firstItem="dOH-Ia-cyh" firstAttribute="top" secondItem="ivD-6F-Z8D" secondAttribute="bottom" constant="8" id="Hmn-ue-AvI"/>
                                             <constraint firstItem="42V-kr-efX" firstAttribute="trailing" secondItem="dOH-Ia-cyh" secondAttribute="trailing" id="MWl-7f-gaX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ivD-6F-Z8D" secondAttribute="trailing" constant="10" id="Uud-Cv-7ac"/>
+                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="centerX" secondItem="Boe-0f-4y9" secondAttribute="centerX" id="YqX-4V-WQv"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOH-Ia-cyh" secondAttribute="trailing" constant="10" id="Z05-oj-pCN"/>
                                             <constraint firstItem="42V-kr-efX" firstAttribute="top" secondItem="dOH-Ia-cyh" secondAttribute="bottom" constant="8" id="Zc1-mx-KrZ"/>
+                                            <constraint firstItem="dOH-Ia-cyh" firstAttribute="top" secondItem="ivD-6F-Z8D" secondAttribute="bottom" constant="8" id="hHt-D2-9hg"/>
                                             <constraint firstItem="dOH-Ia-cyh" firstAttribute="leading" secondItem="Boe-0f-4y9" secondAttribute="leading" constant="20" id="hUi-We-x5o"/>
-                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="leading" secondItem="Boe-0f-4y9" secondAttribute="leading" constant="10" id="m6z-3W-8qf"/>
+                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="top" secondItem="Boe-0f-4y9" secondAttribute="top" constant="10" id="zeF-em-ag1"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="productImageView" destination="ivD-6F-Z8D" id="u9U-gb-j1j"/>
