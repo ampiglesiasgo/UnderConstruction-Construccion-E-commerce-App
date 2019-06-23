@@ -162,7 +162,6 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "barracaCell", for : indexPath) as! BarracasTableViewCell
-        
         //cell.selectedBackgroundView 
         if filterBarracas{
             let barraca =  ModelManager.shared.filteredBarracas[indexPath.row]
@@ -191,7 +190,15 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        index = indexPath.row
+        if filterBarracas{
+            let bar = ModelManager.shared.filteredBarracas[indexPath.row]
+            if let i = ModelManager.shared.barracas.firstIndex(where: { $0.id == bar.id }) {
+                index = i
+            }
+        }
+        else {
+            index = indexPath.row
+        }
         self.performSegue(withIdentifier: "toBarracaDetails", sender: self)
     }
 

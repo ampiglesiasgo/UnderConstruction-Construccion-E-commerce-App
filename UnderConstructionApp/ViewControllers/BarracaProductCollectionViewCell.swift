@@ -19,8 +19,8 @@ class BarracaProductCollectionViewCell: UICollectionViewCell {
         productImageView.layer.cornerRadius = 12
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 12
-        productImageView.layer.borderColor = UIColor.black.cgColor
-        productImageView.layer.borderWidth = 1
+       // productImageView.layer.borderColor = UIColor.black.cgColor
+       // productImageView.layer.borderWidth = 1
         
     }
 }

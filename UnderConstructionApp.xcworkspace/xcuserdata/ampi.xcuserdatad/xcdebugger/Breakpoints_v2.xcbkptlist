@@ -9,14 +9,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UnderConstructionApp/ViewControllers/BarracaViewController.swift"
-            timestampString = "582945958.744585"
+            filePath = "UnderConstructionApp/ViewControllers/BarracasTableViewController.swift"
+            timestampString = "582966257.112031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UnderConstructionApp.BarracasTableViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "UnderConstructionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ampi/Google%20Drive/DispositivosMoviles/UnderConstructionApp/UnderConstructionApp/ViewControllers/BarracasTableViewController.swift"
+                  timestampString = "582966257.447757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "537">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (UnderConstructionApp.Barraca) -&gt; Swift.Bool in UnderConstructionApp.BarracasTableViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "UnderConstructionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ampi/Google%20Drive/DispositivosMoviles/UnderConstructionApp/UnderConstructionApp/ViewControllers/BarracasTableViewController.swift"
+                  timestampString = "582966257.45056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UnderConstructionApp/ViewControllers/BarracaViewController.swift"
-            timestampString = "582945958.744657"
+            filePath = "UnderConstructionApp/ViewControllers/BarracasTableViewController.swift"
+            timestampString = "582966257.112765"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
