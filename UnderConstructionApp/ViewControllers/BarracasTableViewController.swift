@@ -20,6 +20,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     var classifierResult = ""
     var filterBarracas = false
     var filterCategory = ""
+    var index = 0
 
 
 
@@ -161,7 +162,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "barracaCell", for : indexPath) as! BarracasTableViewCell
-
+        
+        //cell.selectedBackgroundView 
         if filterBarracas{
             let barraca =  ModelManager.shared.filteredBarracas[indexPath.row]
             cell.barracaNameLabel.text = barraca.name
@@ -186,7 +188,21 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = indexPath.row
+        self.performSegue(withIdentifier: "toBarracaDetails", sender: self)
+    }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == "toBarracaDetails"{
+            let barracaViewController = (segue.destination as! BarracaViewController)
+            barracaViewController.index = index
+            
+        }
+}
 }
 
