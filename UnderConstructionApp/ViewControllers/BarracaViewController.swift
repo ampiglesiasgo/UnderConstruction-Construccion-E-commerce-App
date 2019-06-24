@@ -72,25 +72,25 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
     }
     
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//            let cell = baseCollectionView.cellForItem(at: indexPath) as! CategoriesCollectionViewCell
-//            filterCategory = cell.categoryLabel.text!
-//            
-//            self.performSegue(withIdentifier: "categorySegue", sender: self)
-//
-//    }
-//    
-//    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "categorySegue"{
-//            let barracasTableViewController = (segue.destination as! BarracasTableViewController)
-//            barracasTableViewController.filterCategory = filterCategory
-//            
-//            
-//        }
-//    }
-//    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+            let cell = productsCollectionView.cellForItem(at: indexPath) as! BarracaProductCollectionViewCell
+            //filterCategory = cell.categoryLabel.text!
+        
+            self.performSegue(withIdentifier: "toProductDetails", sender: self)
+
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toProductDetails"{
+            let productDetailsViewController = (segue.destination as! ProductDetailsViewController)
+           // barracasTableViewController.filterCategory = filterCategory
+            
+            
+        }
+    }
+    
     
 }
