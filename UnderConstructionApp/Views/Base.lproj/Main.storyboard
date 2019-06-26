@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -932,7 +932,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-9T-su2">
-                                <rect key="frame" x="50" y="570.5" width="275" height="32.5"/>
+                                <rect key="frame" x="50" y="563" width="275" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -950,14 +950,14 @@
                             <constraint firstItem="8XV-cb-jUj" firstAttribute="trailing" secondItem="E5a-nn-u6g" secondAttribute="trailing" id="Kkb-fn-mcU"/>
                             <constraint firstItem="w9x-V4-HoV" firstAttribute="top" secondItem="yjX-JK-uSG" secondAttribute="top" constant="30" id="KoM-me-sJV"/>
                             <constraint firstItem="E5a-nn-u6g" firstAttribute="trailing" secondItem="w9x-V4-HoV" secondAttribute="trailing" id="QvD-xA-8nI"/>
-                            <constraint firstItem="yjX-JK-uSG" firstAttribute="bottom" secondItem="pwm-9T-su2" secondAttribute="bottom" constant="15" id="Taz-wL-1H0"/>
+                            <constraint firstItem="yjX-JK-uSG" firstAttribute="bottom" secondItem="pwm-9T-su2" secondAttribute="bottom" constant="25" id="Taz-wL-1H0"/>
                             <constraint firstItem="cOo-y8-3bY" firstAttribute="centerX" secondItem="yjX-JK-uSG" secondAttribute="centerX" id="ULY-TE-mg8"/>
                             <constraint firstItem="pwm-9T-su2" firstAttribute="leading" secondItem="yjX-JK-uSG" secondAttribute="leading" constant="50" id="Uyk-4z-X02"/>
                             <constraint firstItem="w9x-V4-HoV" firstAttribute="centerX" secondItem="yjX-JK-uSG" secondAttribute="centerX" id="XH2-ka-cmm"/>
                             <constraint firstItem="E5a-nn-u6g" firstAttribute="top" secondItem="w9x-V4-HoV" secondAttribute="bottom" constant="30" id="Xdp-2P-aRf"/>
                             <constraint firstItem="8XV-cb-jUj" firstAttribute="leading" secondItem="E5a-nn-u6g" secondAttribute="leading" id="Z7Z-bZ-2lD"/>
                             <constraint firstItem="E5a-nn-u6g" firstAttribute="leading" secondItem="w9x-V4-HoV" secondAttribute="leading" id="ZN3-Ly-xKT"/>
-                            <constraint firstItem="pwm-9T-su2" firstAttribute="top" secondItem="cOo-y8-3bY" secondAttribute="bottom" constant="25" id="bXq-gd-6ig"/>
+                            <constraint firstItem="pwm-9T-su2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cOo-y8-3bY" secondAttribute="bottom" constant="15" id="bXq-gd-6ig"/>
                             <constraint firstItem="cOo-y8-3bY" firstAttribute="top" secondItem="8XV-cb-jUj" secondAttribute="bottom" constant="30" id="bn1-Z3-C7q"/>
                             <constraint firstItem="w9x-V4-HoV" firstAttribute="leading" secondItem="yjX-JK-uSG" secondAttribute="leading" constant="40" id="h1u-Um-fo9"/>
                             <constraint firstItem="cOo-y8-3bY" firstAttribute="leading" secondItem="yjX-JK-uSG" secondAttribute="leading" constant="40" id="o9T-y1-lae"/>
