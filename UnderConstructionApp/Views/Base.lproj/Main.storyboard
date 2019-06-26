@@ -788,13 +788,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42V-kr-efX">
-                                                    <rect key="frame" x="20" y="193" width="43.5" height="21"/>
+                                                    <rect key="frame" x="20" y="202" width="43.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOH-Ia-cyh">
-                                                    <rect key="frame" x="20" y="164" width="43.5" height="21"/>
+                                                    <rect key="frame" x="20" y="171" width="43.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -807,8 +807,8 @@
                                             <constraint firstAttribute="trailing" secondItem="ivD-6F-Z8D" secondAttribute="trailing" constant="10" id="Uud-Cv-7ac"/>
                                             <constraint firstItem="ivD-6F-Z8D" firstAttribute="centerX" secondItem="Boe-0f-4y9" secondAttribute="centerX" id="YqX-4V-WQv"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOH-Ia-cyh" secondAttribute="trailing" constant="10" id="Z05-oj-pCN"/>
-                                            <constraint firstItem="42V-kr-efX" firstAttribute="top" secondItem="dOH-Ia-cyh" secondAttribute="bottom" constant="8" id="Zc1-mx-KrZ"/>
-                                            <constraint firstItem="dOH-Ia-cyh" firstAttribute="top" secondItem="ivD-6F-Z8D" secondAttribute="bottom" constant="8" id="hHt-D2-9hg"/>
+                                            <constraint firstItem="42V-kr-efX" firstAttribute="top" secondItem="dOH-Ia-cyh" secondAttribute="bottom" constant="10" id="Zc1-mx-KrZ"/>
+                                            <constraint firstItem="dOH-Ia-cyh" firstAttribute="top" secondItem="ivD-6F-Z8D" secondAttribute="bottom" constant="15" id="hHt-D2-9hg"/>
                                             <constraint firstItem="dOH-Ia-cyh" firstAttribute="leading" secondItem="Boe-0f-4y9" secondAttribute="leading" constant="20" id="hUi-We-x5o"/>
                                             <constraint firstItem="ivD-6F-Z8D" firstAttribute="top" secondItem="Boe-0f-4y9" secondAttribute="top" constant="10" id="zeF-em-ag1"/>
                                         </constraints>
@@ -895,7 +895,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productPhotosCell" id="y40-9e-jil">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productPhotosCell" id="y40-9e-jil" customClass="ProductPhotoCollectionViewCell" customModule="UnderConstructionApp" customModuleProvider="target">
                                         <rect key="frame" x="-5.5" y="0.0" width="306" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -915,8 +915,15 @@
                                             <constraint firstItem="FeA-H2-xVv" firstAttribute="centerX" secondItem="y40-9e-jil" secondAttribute="centerX" id="Bxs-Qg-b45"/>
                                             <constraint firstItem="FeA-H2-xVv" firstAttribute="leading" secondItem="y40-9e-jil" secondAttribute="leading" id="gTF-4Y-gDW"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="productImage" destination="FeA-H2-xVv" id="C8I-S8-EKj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hEv-39-KE6" id="aOY-gY-c7q"/>
+                                    <outlet property="delegate" destination="hEv-39-KE6" id="tNL-e8-Cot"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5a-nn-u6g">
                                 <rect key="frame" x="40" y="148" width="295" height="21.5"/>
@@ -958,6 +965,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yjX-JK-uSG"/>
                     </view>
+                    <connections>
+                        <outlet property="productDetailsLabel" destination="E5a-nn-u6g" id="JeW-Wi-6tR"/>
+                        <outlet property="productNameLabel" destination="w9x-V4-HoV" id="C3c-We-5Fw"/>
+                        <outlet property="productPhotosCollectionView" destination="cOo-y8-3bY" id="BHz-CD-pUd"/>
+                        <outlet property="productPriceLabel" destination="8XV-cb-jUj" id="ZwJ-QE-nEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3v5-1T-3fB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1095,7 +1108,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n17-Rb-B2k"/>
-        <segue reference="aCF-eo-sAT"/>
+        <segue reference="6xs-oa-Eow"/>
         <segue reference="bcT-yV-Wuq"/>
     </inferredMetricsTieBreakers>
 </document>

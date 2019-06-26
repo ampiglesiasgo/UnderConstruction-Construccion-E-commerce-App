@@ -15,6 +15,7 @@ class BarracaViewController: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     var index = 0
     var products = [Product]()
+    var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0,photoGallery : [String]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,11 +74,13 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-            let cell = productsCollectionView.cellForItem(at: indexPath) as! BarracaProductCollectionViewCell
-            //filterCategory = cell.categoryLabel.text!
-        
-            self.performSegue(withIdentifier: "toProductDetails", sender: self)
+        var index = 0
+        let cell = productsCollectionView.cellForItem(at: indexPath) as! BarracaProductCollectionViewCell
+        if let i = ModelManager.shared.productos.firstIndex(where: { $0.name == cell.productNameLabel.text }) {
+            index = i
+        }
+        product = ModelManager.shared.productos[index]
+        self.performSegue(withIdentifier: "toProductDetails", sender: self)
 
     }
     
@@ -86,7 +89,7 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
         
         if segue.identifier == "toProductDetails"{
             let productDetailsViewController = (segue.destination as! ProductDetailsViewController)
-           // barracasTableViewController.filterCategory = filterCategory
+           productDetailsViewController.product = product
             
             
         }

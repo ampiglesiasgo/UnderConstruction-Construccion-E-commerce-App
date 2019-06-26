@@ -15,14 +15,18 @@ class Product {
     var category : String
     var details : String
     var price : Double
+    var photoGallery : [String]
     
-    init(id:Int,name:String,photourl:String,category : String, details : String, price : Double) {
+    init(id:Int,name:String,photourl:String,category : String, details : String, price : Double, photoGallery : [String]) {
         self.id = id
         self.name = name
         self.photourl = photourl
         self.category = category
         self.details = details
         self.price = price
+        self.photoGallery = photoGallery
     }
+    
+    //init() {}
     
 }

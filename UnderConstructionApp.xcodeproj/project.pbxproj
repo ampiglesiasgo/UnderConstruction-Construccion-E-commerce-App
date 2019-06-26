@@ -19,6 +19,7 @@
 		B957C5E322BED7320033C0BD /* BarracaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E222BED7320033C0BD /* BarracaViewController.swift */; };
 		B957C5E522BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */; };
 		B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */; };
+		B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */; };
 		B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */; };
 		B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */; };
 		B96BF50422B73B63008B93EC /* Barraca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50322B73B63008B93EC /* Barraca.swift */; };
@@ -53,6 +54,7 @@
 		B957C5E222BED7320033C0BD /* BarracaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracaViewController.swift; sourceTree = "<group>"; };
 		B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracaProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewController.swift; sourceTree = "<group>"; };
 		B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewCell.swift; sourceTree = "<group>"; };
 		B96BF50322B73B63008B93EC /* Barraca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barraca.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				B957C5E222BED7320033C0BD /* BarracaViewController.swift */,
 				B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */,
 				B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */,
+				B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */,
+				B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */,
 				B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */,
 				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
