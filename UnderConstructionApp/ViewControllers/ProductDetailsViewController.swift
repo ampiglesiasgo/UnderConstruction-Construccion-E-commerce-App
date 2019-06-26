@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductDetailsViewController: UIViewController {
 
@@ -40,6 +41,7 @@ extension ProductDetailsViewController : UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productPhotosCell", for: indexPath) as! ProductPhotoCollectionViewCell
+        cell.productImage.kf.setImage(with: URL(string: product.photoGallery[indexPath.row]))
         
         return cell
     }
