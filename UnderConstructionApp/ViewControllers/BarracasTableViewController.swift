@@ -101,7 +101,7 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                                                    category : data.value(forKey: "category") as! String,
                                                    details : data.value(forKey: "details") as! String,
                                                    price : data.value(forKey: "price") as! Double ,
-                                                   photoGallery : [String]()) //modificar y agregar los productos
+                                                   photoGallery :  data.value(forKey: "photoGallery") as! [String])
                                 products.append(prod)
                                 if !(ModelManager.shared.productos.contains(where: { $0.id == id_prod })){
                                     ModelManager.shared.productos.append(prod)
