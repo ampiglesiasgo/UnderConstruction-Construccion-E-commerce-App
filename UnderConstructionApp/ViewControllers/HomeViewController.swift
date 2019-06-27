@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import FirebaseFirestore
+import AlignedCollectionViewFlowLayout
 
 class HomeViewController: UIViewController {
     
@@ -42,6 +43,16 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left,
+                                                                verticalAlignment: .top)
+        
+        alignedFlowLayout.minimumInteritemSpacing = 1.0
+        alignedFlowLayout.minimumLineSpacing = 1.0
+
+        baseCollectionView.collectionViewLayout = alignedFlowLayout
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,17 +89,6 @@ class HomeViewController: UIViewController {
             }
         }
         
-    }
-    
-    
-    
-    override func viewWillLayoutSubviews() {
-//        bannerColletionView.layer.masksToBounds = true
-//        bannerColletionView.layer.cornerRadius = 12
-//        categoriesSearchBar.layer.masksToBounds = true
-//        categoriesSearchBar.layer.cornerRadius = 12
-//        categoriesColletionView.layer.masksToBounds = true
-//        categoriesColletionView.layer.cornerRadius = 12
     }
     
     
@@ -256,6 +256,7 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if !(indexPath.row == 0 || indexPath.row == 1){
             let cell = baseCollectionView.cellForItem(at: indexPath) as! CategoriesCollectionViewCell
@@ -275,20 +276,10 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
                 
             }
         }
+    
 }
 
-//extension HomeViewController {
-//
-//    func HideKeyboard(){
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(DismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//    }
-//
-//    @objc func DismissKeyboard(){
-//        view.endEditing(true)
-//    }
-//
-//}
+
 
 extension HomeViewController : SearchCollectionViewCellDelegate {
     
@@ -317,6 +308,4 @@ extension HomeViewController : SearchCollectionViewCellDelegate {
     
     
     
-    
 }
-
