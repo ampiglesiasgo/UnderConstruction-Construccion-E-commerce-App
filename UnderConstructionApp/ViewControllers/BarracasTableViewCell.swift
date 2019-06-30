@@ -23,6 +23,7 @@ class BarracasTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         barracasPhotoImageView.layer.cornerRadius = 15
+    
     }
 
 }

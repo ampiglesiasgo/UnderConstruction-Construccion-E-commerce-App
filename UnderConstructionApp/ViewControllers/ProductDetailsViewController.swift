@@ -29,6 +29,22 @@ class ProductDetailsViewController: UIViewController {
         productDetailsLabel.text = product.details
         productPriceLabel.text = "$ " +  "\(product.price)"
     }
+    
+    @IBAction func productPurchaseButtonAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "productPurchaseDetail", sender: self)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "productPurchaseDetail"{
+            let productFinalDetailsViewController = (segue.destination as! ProductFinalDetailsViewController)
+//            productDetailsViewController.product = product
+            
+            
+        }
+    }
 
 
 }

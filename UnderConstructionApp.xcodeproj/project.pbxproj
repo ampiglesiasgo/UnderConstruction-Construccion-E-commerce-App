@@ -11,6 +11,8 @@
 		B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B90B216D22BAE25700EBE529 /* Inceptionv3.mlmodel */; };
 		B90B217022BAE69B00EBE529 /* PhotoResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */; };
 		B90B217222BAFA1500EBE529 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B217122BAFA1500EBE529 /* Translation.swift */; };
+		B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */; };
+		B90BB2BD22C58F1700737FCE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */; };
 		B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E28E22AB2D9C00170141 /* AppDelegate.swift */; };
 		B954E29122AB2D9C00170141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E29022AB2D9C00170141 /* ViewController.swift */; };
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		B90B216D22BAE25700EBE529 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		B90B216F22BAE69B00EBE529 /* PhotoResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResultViewController.swift; sourceTree = "<group>"; };
 		B90B217122BAFA1500EBE529 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFinalDetailsViewController.swift; sourceTree = "<group>"; };
+		B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		B954E28B22AB2D9C00170141 /* UnderConstructionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderConstructionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954E28E22AB2D9C00170141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B954E29022AB2D9C00170141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */,
 				B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */,
 				B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */,
+				B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */,
+				B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,10 +344,12 @@
 				B96BF50622B73C1B008B93EC /* Product.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B957C5E522BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift in Sources */,
+				B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */,
 				B954E29122AB2D9C00170141 /* ViewController.swift in Sources */,
 				B9F86CFE22B30EEF00628463 /* BaseCollectionViewCell.swift in Sources */,
 				B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */,
 				B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */,
+				B90BB2BD22C58F1700737FCE /* ShoppingCartViewController.swift in Sources */,
 				B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */,
 				B90B217222BAFA1500EBE529 /* Translation.swift in Sources */,
 				B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */,
