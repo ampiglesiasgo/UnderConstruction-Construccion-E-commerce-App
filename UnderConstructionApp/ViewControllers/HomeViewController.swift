@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 import FirebaseFirestore
-import AlignedCollectionViewFlowLayout
 
 class HomeViewController: UIViewController {
     
@@ -58,6 +57,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         homeActivityIndicator.isHidden = false
         homeActivityIndicator.startAnimating()
+        filteredTableData = [Category]()
+        searching = false
         self.itemCount = 0
         getBanner(db: db) { (finishBanner) in
             if finishBanner{
@@ -200,6 +201,9 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             cell.collectionSearchBar.layer.masksToBounds = true
             cell.collectionSearchBar.layer.cornerRadius = 12
             cell.delegate = self
+            if !searching{
+                cell.collectionSearchBar.text = ""
+            }
             return cell
         }
         else

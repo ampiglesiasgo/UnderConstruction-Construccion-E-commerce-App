@@ -22,6 +22,7 @@
 		B957C5E522BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */; };
 		B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */; };
 		B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */; };
+		B96B58DA22C86A770059A219 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B58D922C86A770059A219 /* AlignedCollectionViewFlowLayout.swift */; };
 		B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */; };
 		B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */; };
 		B96BF50422B73B63008B93EC /* Barraca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50322B73B63008B93EC /* Barraca.swift */; };
@@ -59,6 +60,7 @@
 		B957C5E422BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracaProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B96B58D922C86A770059A219 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewController.swift; sourceTree = "<group>"; };
 		B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewCell.swift; sourceTree = "<group>"; };
 		B96BF50322B73B63008B93EC /* Barraca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barraca.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		B9C471FB22AF537300918EAE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B96B58D922C86A770059A219 /* AlignedCollectionViewFlowLayout.swift */,
 				B9C471FC22AF539C00918EAE /* ModelManager.swift */,
 				B90B217122BAFA1500EBE529 /* Translation.swift */,
 			);
@@ -273,7 +276,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UnderConstructionApp/Pods-UnderConstructionApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AlignedCollectionViewFlowLayout/AlignedCollectionViewFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -286,7 +288,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlignedCollectionViewFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -342,6 +343,7 @@
 				B96BF50422B73B63008B93EC /* Barraca.swift in Sources */,
 				B957C5E322BED7320033C0BD /* BarracaViewController.swift in Sources */,
 				B96BF50622B73C1B008B93EC /* Product.swift in Sources */,
+				B96B58DA22C86A770059A219 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B957C5E522BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift in Sources */,
 				B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */,

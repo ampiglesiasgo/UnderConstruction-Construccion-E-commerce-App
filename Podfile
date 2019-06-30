@@ -11,5 +11,4 @@ target 'UnderConstructionApp' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Firestore'
 	pod 'Kingfisher'
-	pod 'AlignedCollectionViewFlowLayout'
 end
