@@ -1050,6 +1050,9 @@
                                             <constraint firstAttribute="width" constant="23" id="WpD-ql-aAh"/>
                                         </constraints>
                                         <state key="normal" image="icon-plus"/>
+                                        <connections>
+                                            <action selector="ButtonPlusAction:" destination="iFb-6p-Pxl" eventType="touchUpInside" id="f2a-Zk-RXb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-0o-Gyc" userLabel="ButtonMinus">
                                         <rect key="frame" x="0.0" y="0.0" width="23" height="30"/>
@@ -1058,6 +1061,9 @@
                                             <constraint firstAttribute="height" constant="30" id="hfp-yV-pBz"/>
                                         </constraints>
                                         <state key="normal" image="icon-minus"/>
+                                        <connections>
+                                            <action selector="ButtonMinusAction:" destination="iFb-6p-Pxl" eventType="touchUpInside" id="X25-lX-e3z"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXB-c3-ggA">
                                         <rect key="frame" x="23" y="0.0" width="24" height="30"/>
@@ -1119,6 +1125,7 @@
                         <viewLayoutGuide key="safeArea" id="hm2-N2-nHQ"/>
                     </view>
                     <connections>
+                        <outlet property="buttonPlusView" destination="nn7-4y-XCi" id="62P-Dz-fYr"/>
                         <outlet property="messageTextField" destination="noT-3L-BTX" id="t3j-R8-o8K"/>
                         <outlet property="productQuantityLabel" destination="UXB-c3-ggA" id="A4J-P0-nqf"/>
                         <outlet property="productUnitPicker" destination="bkZ-fu-aBf" id="pw0-cf-L9S"/>

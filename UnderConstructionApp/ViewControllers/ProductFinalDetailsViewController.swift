@@ -12,6 +12,8 @@ class ProductFinalDetailsViewController: UIViewController {
     @IBOutlet weak var productUnitPicker: UIPickerView!
     @IBOutlet weak var productQuantityLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextView!
+    @IBOutlet weak var buttonPlusView: UIView!
+    
     let pickerData = ["Unidad","por m2","Caja","Balde"]
     var unitSelected = "Unidad"
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
@@ -23,6 +25,7 @@ class ProductFinalDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.HideKeyboard()
 
         // Do any additional setup after loading the view.
     }
@@ -50,6 +53,22 @@ class ProductFinalDetailsViewController: UIViewController {
         self.navigationController!.popToViewController(barracaViewController!, animated: true)
         
     }
+    
+    
+    
+    @IBAction func ButtonPlusAction(_ sender: Any) {
+        var quantity = Int(productQuantityLabel.text!)
+        quantity = quantity! + 1
+        productQuantityLabel.text = String(quantity!)
+        
+    }
+    
+    @IBAction func ButtonMinusAction(_ sender: Any) {
+        var quantity = Int(productQuantityLabel.text!)
+        quantity = quantity! - 1
+        productQuantityLabel.text = String(quantity!)
+    }
+    
     
 //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,4 +101,18 @@ extension ProductFinalDetailsViewController : UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         unitSelected = pickerData[row]
     }
+}
+
+extension ProductFinalDetailsViewController {
+    
+    func HideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
 }
