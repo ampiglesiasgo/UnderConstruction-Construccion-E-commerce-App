@@ -16,4 +16,5 @@ class ShoppingCartItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shoppingCartItemUnit: UILabel!
     @IBOutlet weak var shoppingCartItemQuantity: UILabel!
     
+
 }

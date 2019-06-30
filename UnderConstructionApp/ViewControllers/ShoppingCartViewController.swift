@@ -20,15 +20,6 @@ class ShoppingCartViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        if self.isMovingFromParentViewController {
-//            barracaViewController?.shopingCartList = shopingCartList
-//        }
-//    }
-    
 
 }
 
@@ -46,6 +37,16 @@ extension ShoppingCartViewController : UICollectionViewDataSource, UICollectionV
         cell.shoppingCartItemPrice.text = "$ " + "\(shopItem.subTotal)"
         cell.shoppingCartItemUnit.text = shopItem.unit
         cell.shoppingCartItemQuantity.text = "\(shopItem.quantity)"
+        cell.contentView.layer.cornerRadius = 12
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.masksToBounds = true
+        
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
     }

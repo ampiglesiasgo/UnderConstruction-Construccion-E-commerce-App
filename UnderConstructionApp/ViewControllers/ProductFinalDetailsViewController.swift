@@ -13,7 +13,7 @@ class ProductFinalDetailsViewController: UIViewController {
     @IBOutlet weak var productQuantityLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextView!
     let pickerData = ["Unidad","por m2","Caja","Balde"]
-    var unitSelected = ""
+    var unitSelected = "Unidad"
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
     //var shopingCartList = [ShoppingCartItem]()
     var barracaViewController:BarracaViewController?
