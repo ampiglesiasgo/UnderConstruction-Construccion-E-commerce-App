@@ -39,7 +39,10 @@ class BarracaViewController: UIViewController {
         
     }
     @objc func addTapped() {
+        self.performSegue(withIdentifier: "toShoppingCart", sender: self)
+
     }
+    
 
 }
 
@@ -99,6 +102,12 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
         if segue.identifier == "toProductDetails"{
             let productDetailsViewController = (segue.destination as! ProductDetailsViewController)
            productDetailsViewController.product = product
+            
+            
+        }
+        if segue.identifier == "toShoppingCart"{
+            let shoppingCartViewController = (segue.destination as! ShoppingCartViewController)
+            //productDetailsViewController.product = product
             
             
         }

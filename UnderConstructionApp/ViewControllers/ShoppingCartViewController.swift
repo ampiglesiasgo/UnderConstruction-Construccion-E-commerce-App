@@ -9,6 +9,9 @@
 import UIKit
 
 class ShoppingCartViewController: UIViewController {
+    
+    
+    var shopingCartList = [ShoppingCartItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,4 +32,17 @@ class ShoppingCartViewController: UIViewController {
 
     
 
+}
+
+
+extension ShoppingCartViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shoppingItemCell", for: indexPath) as! ShoppingCartItemCollectionViewCell
+        
+        return cell
+    }
 }

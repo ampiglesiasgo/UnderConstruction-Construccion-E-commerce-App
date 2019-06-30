@@ -13,6 +13,7 @@
 		B90B217222BAFA1500EBE529 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B217122BAFA1500EBE529 /* Translation.swift */; };
 		B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */; };
 		B90BB2BD22C58F1700737FCE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */; };
+		B950B27F22C9124A003BA515 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */; };
 		B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E28E22AB2D9C00170141 /* AppDelegate.swift */; };
 		B954E29122AB2D9C00170141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E29022AB2D9C00170141 /* ViewController.swift */; };
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */; };
 		B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */; };
 		B96B58DA22C86A770059A219 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B58D922C86A770059A219 /* AlignedCollectionViewFlowLayout.swift */; };
+		B96B58DC22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B58DB22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift */; };
 		B96BF50022B73841008B93EC /* BarracasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */; };
 		B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */; };
 		B96BF50422B73B63008B93EC /* Barraca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BF50322B73B63008B93EC /* Barraca.swift */; };
@@ -49,6 +51,7 @@
 		B90B217122BAFA1500EBE529 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFinalDetailsViewController.swift; sourceTree = "<group>"; };
 		B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItem.swift; sourceTree = "<group>"; };
 		B954E28B22AB2D9C00170141 /* UnderConstructionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderConstructionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954E28E22AB2D9C00170141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B954E29022AB2D9C00170141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		B957C5E622C053710033C0BD /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B96B58D922C86A770059A219 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		B96B58DB22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B96BF4FF22B73841008B93EC /* BarracasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewController.swift; sourceTree = "<group>"; };
 		B96BF50122B73ACE008B93EC /* BarracasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarracasTableViewCell.swift; sourceTree = "<group>"; };
 		B96BF50322B73B63008B93EC /* Barraca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barraca.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				B959266622C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift */,
 				B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */,
 				B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */,
+				B96B58DB22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				B96D9AC222B1C00600A0ECBA /* Category.swift */,
 				B96BF50322B73B63008B93EC /* Barraca.swift */,
 				B96BF50522B73C1B008B93EC /* Product.swift */,
+				B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */,
 				B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */,
 				B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */,
+				B950B27F22C9124A003BA515 /* ShoppingCartItem.swift in Sources */,
 				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */,
@@ -343,6 +350,7 @@
 				B96BF50422B73B63008B93EC /* Barraca.swift in Sources */,
 				B957C5E322BED7320033C0BD /* BarracaViewController.swift in Sources */,
 				B96BF50622B73C1B008B93EC /* Product.swift in Sources */,
+				B96B58DC22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift in Sources */,
 				B96B58DA22C86A770059A219 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				B9C471EF22ADA01500918EAE /* RegisterViewController.swift in Sources */,
 				B957C5E522BEF4E50033C0BD /* BarracaProductCollectionViewCell.swift in Sources */,

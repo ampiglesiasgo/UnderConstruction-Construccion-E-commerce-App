@@ -862,6 +862,7 @@
                         <outlet property="logoImageView" destination="pXb-bG-MAm" id="Uak-sN-s1V"/>
                         <outlet property="productsCollectionView" destination="30X-IW-XtL" id="afv-iO-64i"/>
                         <segue destination="hEv-39-KE6" kind="show" identifier="toProductDetails" id="KpM-ov-Dui"/>
+                        <segue destination="LqE-KV-QMe" kind="show" identifier="toShoppingCart" id="89H-BU-yBH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIX-Gm-Izc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1146,7 +1147,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZHi-rl-oWN">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shoppingItemCell" id="ZHi-rl-oWN" customClass="ShoppingCartItemCollectionViewCell" customModule="UnderConstructionApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1176,7 +1177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMv-gd-6mK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5774" y="857"/>
+            <point key="canvasLocation" x="4585" y="1764"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zdT-Ye-W9h">
