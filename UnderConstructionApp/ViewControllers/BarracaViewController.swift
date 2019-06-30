@@ -16,7 +16,8 @@ class BarracaViewController: UIViewController {
     var index = 0
     var products = [Product]()
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0,photoGallery : [String]())
-    
+    var shopingCartList = [ShoppingCartItem]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let barraca = ModelManager.shared.barracas[index]
@@ -26,7 +27,10 @@ class BarracaViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(addTapped))
-        navigationItem.rightBarButtonItem?.image = UIImage(named: "carritoVacio")
+        if shopingCartList.count == 0 {
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "carritoVacio")
+        }
+        else {navigationItem.rightBarButtonItem?.image = UIImage(named: "carritolleno")}
         navigationItem.rightBarButtonItem?.tintColor = .black
 
         products = ModelManager.shared.barracas[index].products
@@ -101,13 +105,15 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
         
         if segue.identifier == "toProductDetails"{
             let productDetailsViewController = (segue.destination as! ProductDetailsViewController)
-           productDetailsViewController.product = product
+            productDetailsViewController.product = product
+            productDetailsViewController.barracaViewController = self
             
             
         }
         if segue.identifier == "toShoppingCart"{
             let shoppingCartViewController = (segue.destination as! ShoppingCartViewController)
-            //productDetailsViewController.product = product
+            shoppingCartViewController.barracaViewController = self
+            shoppingCartViewController.shopingCartList = shopingCartList
             
             
         }

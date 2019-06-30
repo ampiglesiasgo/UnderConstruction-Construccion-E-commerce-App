@@ -16,6 +16,8 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productPhotosCollectionView: UICollectionView!
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
+    var barracaViewController:BarracaViewController?
+
     
     
     override func viewDidLoad() {
@@ -40,7 +42,8 @@ class ProductDetailsViewController: UIViewController {
         
         if segue.identifier == "productPurchaseDetail"{
             let productFinalDetailsViewController = (segue.destination as! ProductFinalDetailsViewController)
-//            productDetailsViewController.product = product
+            productFinalDetailsViewController.product = product
+            productFinalDetailsViewController.barracaViewController = barracaViewController
             
             
         }

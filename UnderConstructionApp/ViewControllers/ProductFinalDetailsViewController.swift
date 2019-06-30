@@ -10,13 +10,15 @@ import UIKit
 
 class ProductFinalDetailsViewController: UIViewController {
     @IBOutlet weak var productUnitPicker: UIPickerView!
-    
     @IBOutlet weak var productQuantityLabel: UILabel!
-    
     @IBOutlet weak var messageTextField: UITextView!
-    
     let pickerData = ["Unidad","por m2","Caja","Balde"]
     var unitSelected = ""
+    var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
+    //var shopingCartList = [ShoppingCartItem]()
+    var barracaViewController:BarracaViewController?
+
+
 
     
     override func viewDidLoad() {
@@ -32,12 +34,20 @@ class ProductFinalDetailsViewController: UIViewController {
         messageTextField.layer.cornerRadius = 12
 
     }
+    func configureShoppingItem() -> ShoppingCartItem {
+        let shoppingCartItem = ShoppingCartItem(product: product)
+        shoppingCartItem.quantity = Int(productQuantityLabel.text!) ?? 0
+        shoppingCartItem.unit = unitSelected
+        shoppingCartItem.comments = messageTextField.text
+        return shoppingCartItem
+        
+    }
     
     
     @IBAction func addItemToChartButtonAction(_ sender: Any) {
-        //self.performSegue(withIdentifier: "toShoppingCart", sender: self)
-        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+        let shoppingCartItem = configureShoppingItem()
+        barracaViewController?.shopingCartList.append(shoppingCartItem)
+        self.navigationController!.popToViewController(barracaViewController!, animated: true)
         
     }
     
