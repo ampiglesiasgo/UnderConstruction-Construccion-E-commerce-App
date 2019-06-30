@@ -10,4 +10,10 @@ import UIKit
 
 class ShoppingCartItemCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var shoppingCartImage: UIImageView!
+    @IBOutlet weak var shoppingCartItemName: UILabel!
+    @IBOutlet weak var shoppingCartItemPrice: UILabel!
+    @IBOutlet weak var shoppingCartItemUnit: UILabel!
+    @IBOutlet weak var shoppingCartItemQuantity: UILabel!
+    
 }
