@@ -1210,6 +1210,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="LqE-KV-QMe" id="x07-wA-8fF"/>
+                                    <outlet property="delegate" destination="LqE-KV-QMe" id="riH-0N-o4C"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCi-b7-AyM">
                                 <rect key="frame" x="30" y="568" width="315" height="30"/>

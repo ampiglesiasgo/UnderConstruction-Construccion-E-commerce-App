@@ -21,25 +21,13 @@ class ShoppingCartViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        if self.isMovingFromParentViewController {
-            barracaViewController?.shopingCartList = shopingCartList
-        }
-    }
-    
-
-
-       // BarracaViewController?.popViewController(animated: true)
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
 //
-//        if let destionationViewController = navigationController?.viewControllers[navigationController?.viewControllers.count ?? 3 - 3] {
-//            navigationController?.popToViewController(destionationViewController, animated: true)
+//        if self.isMovingFromParentViewController {
+//            barracaViewController?.shopingCartList = shopingCartList
 //        }
-        
-//        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-//        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 4], animated: true)
-
+//    }
     
 
 }
@@ -52,6 +40,12 @@ extension ShoppingCartViewController : UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shoppingItemCell", for: indexPath) as! ShoppingCartItemCollectionViewCell
+        let shopItem = shopingCartList[indexPath.row]
+        cell.shoppingCartImage.kf.setImage(with: URL(string: shopItem.product.photourl))
+        cell.shoppingCartItemName.text = shopItem.product.name
+        cell.shoppingCartItemPrice.text = "$ " + "\(shopItem.subTotal)"
+        cell.shoppingCartItemUnit.text = shopItem.unit
+        cell.shoppingCartItemQuantity.text = "\(shopItem.quantity)"
         
         return cell
     }
