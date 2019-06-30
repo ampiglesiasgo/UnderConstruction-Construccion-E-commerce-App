@@ -15,6 +15,8 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     
     @IBOutlet weak var barracasTableView: UITableView!
     @IBOutlet weak var barracasNotFoundLabel: UILabel!
+    @IBOutlet weak var barracasActivityIndicator: UIActivityIndicatorView!
+    
     
     var db: Firestore!
     var classifierResult = ""
@@ -40,10 +42,17 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        barracasTableView.isHidden = true
+        barracasNotFoundLabel.isHidden = true
+        barracasActivityIndicator.startAnimating()
         getBarraca(db: db) { (finishBarraca) in
             if finishBarraca{
+                self.barracasActivityIndicator.stopAnimating()
+                self.barracasActivityIndicator.isHidden = true
+                self.barracasTableView.isHidden = false
                 if self.filterBarracas && (ModelManager.shared.filteredBarracas.count == 0){
                     self.barracasTableView.isHidden = true
+                    self.barracasNotFoundLabel.isHidden = false
                     self.barracasNotFoundLabel.text = "No existe barraca que venda el producto que ud busca"
 
                 }

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -663,7 +663,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQL-4X-YU2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQL-4X-YU2">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -671,7 +671,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cyz-iL-RO7" id="FgG-pA-EOW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxo-KY-hyK">
@@ -731,22 +731,28 @@
                                     <outlet property="delegate" destination="5Xq-SF-pzA" id="Eja-iX-LF4"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2pM-VZ-VgH">
+                                <rect key="frame" x="177.5" y="331" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RHx-If-48l" firstAttribute="centerX" secondItem="ye6-Ge-9d7" secondAttribute="centerX" id="4E7-VP-ilT"/>
                             <constraint firstItem="ye6-Ge-9d7" firstAttribute="trailing" secondItem="RHx-If-48l" secondAttribute="trailing" constant="10" id="IyE-od-gNQ"/>
+                            <constraint firstItem="2pM-VZ-VgH" firstAttribute="centerX" secondItem="ye6-Ge-9d7" secondAttribute="centerX" id="J5l-Za-IYx"/>
                             <constraint firstItem="GQL-4X-YU2" firstAttribute="leading" secondItem="ye6-Ge-9d7" secondAttribute="leading" id="PTl-kl-ZCh"/>
                             <constraint firstItem="RHx-If-48l" firstAttribute="leading" secondItem="ye6-Ge-9d7" secondAttribute="leading" constant="10" id="WTc-e0-wYc"/>
                             <constraint firstItem="GQL-4X-YU2" firstAttribute="centerX" secondItem="ye6-Ge-9d7" secondAttribute="centerX" id="XLy-wL-N5I"/>
                             <constraint firstItem="GQL-4X-YU2" firstAttribute="centerY" secondItem="ye6-Ge-9d7" secondAttribute="centerY" id="Zd2-EY-57i"/>
                             <constraint firstItem="RHx-If-48l" firstAttribute="centerY" secondItem="ye6-Ge-9d7" secondAttribute="centerY" id="hgB-QJ-gbT"/>
                             <constraint firstItem="GQL-4X-YU2" firstAttribute="top" secondItem="ye6-Ge-9d7" secondAttribute="top" id="laV-mD-FZM"/>
+                            <constraint firstItem="2pM-VZ-VgH" firstAttribute="centerY" secondItem="ye6-Ge-9d7" secondAttribute="centerY" id="zBb-bY-2z9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ye6-Ge-9d7"/>
                     </view>
                     <navigationItem key="navigationItem" id="nob-qb-PCT"/>
                     <connections>
+                        <outlet property="barracasActivityIndicator" destination="2pM-VZ-VgH" id="Zh7-C4-C84"/>
                         <outlet property="barracasNotFoundLabel" destination="RHx-If-48l" id="SDy-uB-NGc"/>
                         <outlet property="barracasTableView" destination="GQL-4X-YU2" id="rdh-sb-TvX"/>
                         <segue destination="p4O-0T-OgJ" kind="show" identifier="toBarracaDetails" id="HbJ-58-p6F"/>
