@@ -25,6 +25,10 @@ class BarracaViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem?.image = UIImage(named: "carritoVacio")
+        navigationItem.rightBarButtonItem?.tintColor = .black
+
         products = ModelManager.shared.barracas[index].products
         productsCollectionView.reloadData()
     }
@@ -33,6 +37,8 @@ class BarracaViewController: UIViewController {
         logoImageView.layer.masksToBounds = true
         logoImageView.layer.cornerRadius = 12
         
+    }
+    @objc func addTapped() {
     }
 
 }
