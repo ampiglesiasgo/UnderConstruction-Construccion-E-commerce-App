@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -1407,10 +1407,10 @@
             </objects>
             <point key="canvasLocation" x="5570.3999999999996" y="1768.9655172413795"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish View Controller-->
         <scene sceneID="f6u-ko-5Pe">
             <objects>
-                <viewController id="mVz-EH-LCl" sceneMemberID="viewController">
+                <viewController id="mVz-EH-LCl" customClass="FinishViewController" customModule="UnderConstructionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4g7-Ga-IS9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1695,7 +1695,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wub-pM-hWT"/>
-        <segue reference="YEO-VX-fYm"/>
+        <segue reference="aCF-eo-sAT"/>
         <segue reference="bcT-yV-Wuq"/>
     </inferredMetricsTieBreakers>
 </document>

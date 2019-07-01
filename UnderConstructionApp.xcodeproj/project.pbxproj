@@ -17,6 +17,7 @@
 		B950B28122C9C7BE003BA515 /* ShippingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */; };
 		B950B28322C9C8DB003BA515 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28222C9C8DB003BA515 /* Purchase.swift */; };
 		B950B28522C9E3FF003BA515 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28422C9E3FF003BA515 /* UserDataViewController.swift */; };
+		B950B28822C9EBEA003BA515 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28722C9EBEA003BA515 /* FinishViewController.swift */; };
 		B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E28E22AB2D9C00170141 /* AppDelegate.swift */; };
 		B954E29122AB2D9C00170141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E29022AB2D9C00170141 /* ViewController.swift */; };
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDataViewController.swift; sourceTree = "<group>"; };
 		B950B28222C9C8DB003BA515 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		B950B28422C9E3FF003BA515 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		B950B28722C9EBEA003BA515 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		B954E28B22AB2D9C00170141 /* UnderConstructionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderConstructionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954E28E22AB2D9C00170141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B954E29022AB2D9C00170141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				B96B58DB22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift */,
 				B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */,
 				B950B28422C9E3FF003BA515 /* UserDataViewController.swift */,
+				B950B28722C9EBEA003BA515 /* FinishViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				B9C471F122ADA47D00918EAE /* HomeViewController.swift in Sources */,
 				B90B217222BAFA1500EBE529 /* Translation.swift in Sources */,
 				B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */,
+				B950B28822C9EBEA003BA515 /* FinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,6 +46,7 @@ class ShoppingCartViewController: UIViewController {
         if segue.identifier == "toShippingData"{
             let shippingDataViewController = (segue.destination as! ShippingDataViewController)
             shippingDataViewController.shoppingCartList = shopingCartList
+            shippingDataViewController.barracaViewController = barracaViewController
             
             
         }

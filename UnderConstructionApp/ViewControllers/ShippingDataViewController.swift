@@ -22,6 +22,8 @@ class ShippingDataViewController: UIViewController {
     
     var purchase = Purchase()
     var shoppingCartList = [ShoppingCartItem]()
+    var barracaViewController:BarracaViewController?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +44,20 @@ class ShippingDataViewController: UIViewController {
     }
     
     @IBAction func sendPurchaseDataButtonAction(_ sender: Any) {
-        purchase.shippingName = shippingNameTextField.text!
-        purchase.shoppingCartList = shoppingCartList
-        purchase.shippingAddress = shippingAddressTextField.text!
-        purchase.shippingPhone = shippingPhoneTextField.text!
-        self.performSegue(withIdentifier: "toFinishView", sender: self)
+        if shippingNameTextField.text!.isEmpty || shippingPhoneTextField.text!.isEmpty || shippingAddressTextField.text!.isEmpty {
+            let alertController = UIAlertController(title: "Alerta", message: "Debe rellenar todos los campos", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: .none))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            purchase.shippingName = shippingNameTextField.text!
+            purchase.shoppingCartList = shoppingCartList
+            purchase.shippingAddress = shippingAddressTextField.text!
+            purchase.shippingPhone = shippingPhoneTextField.text!
+            shoppingCartList = [ShoppingCartItem]()
+            barracaViewController?.shopingCartList = shoppingCartList
+            self.performSegue(withIdentifier: "toFinishView", sender: self)
+        }
 
     }
     
