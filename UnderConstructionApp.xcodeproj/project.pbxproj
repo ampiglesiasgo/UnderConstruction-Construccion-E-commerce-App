@@ -14,6 +14,8 @@
 		B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */; };
 		B90BB2BD22C58F1700737FCE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */; };
 		B950B27F22C9124A003BA515 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */; };
+		B950B28122C9C7BE003BA515 /* ShippingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */; };
+		B950B28322C9C8DB003BA515 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28222C9C8DB003BA515 /* Purchase.swift */; };
 		B954E28F22AB2D9C00170141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E28E22AB2D9C00170141 /* AppDelegate.swift */; };
 		B954E29122AB2D9C00170141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B954E29022AB2D9C00170141 /* ViewController.swift */; };
 		B954E29422AB2D9C00170141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B954E29222AB2D9C00170141 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFinalDetailsViewController.swift; sourceTree = "<group>"; };
 		B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItem.swift; sourceTree = "<group>"; };
+		B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDataViewController.swift; sourceTree = "<group>"; };
+		B950B28222C9C8DB003BA515 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		B954E28B22AB2D9C00170141 /* UnderConstructionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderConstructionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B954E28E22AB2D9C00170141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B954E29022AB2D9C00170141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */,
 				B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */,
 				B96B58DB22C89C420059A219 /* ShoppingCartItemCollectionViewCell.swift */,
+				B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				B96BF50322B73B63008B93EC /* Barraca.swift */,
 				B96BF50522B73C1B008B93EC /* Product.swift */,
 				B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */,
+				B950B28222C9C8DB003BA515 /* Purchase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,12 +342,14 @@
 			files = (
 				B989567522BAAFEB00A97334 /* PhotoShootOrLibraryViewController.swift in Sources */,
 				B959266722C2E9C30018F54E /* ProductPhotoCollectionViewCell.swift in Sources */,
+				B950B28122C9C7BE003BA515 /* ShippingDataViewController.swift in Sources */,
 				B90B216E22BAE25800EBE529 /* Inceptionv3.mlmodel in Sources */,
 				B950B27F22C9124A003BA515 /* ShoppingCartItem.swift in Sources */,
 				B96D9AC122B1B16400A0ECBA /* CategoriesCollectionViewCell.swift in Sources */,
 				B96D9AC322B1C00600A0ECBA /* Category.swift in Sources */,
 				B96D9AC822B1DE9400A0ECBA /* SearchCollectionViewCell.swift in Sources */,
 				B90B217022BAE69B00EBE529 /* PhotoResultViewController.swift in Sources */,
+				B950B28322C9C8DB003BA515 /* Purchase.swift in Sources */,
 				B9C471FA22AF51B100918EAE /* Banners.swift in Sources */,
 				B96BF50222B73ACE008B93EC /* BarracasTableViewCell.swift in Sources */,
 				B9C471FD22AF539C00918EAE /* ModelManager.swift in Sources */,

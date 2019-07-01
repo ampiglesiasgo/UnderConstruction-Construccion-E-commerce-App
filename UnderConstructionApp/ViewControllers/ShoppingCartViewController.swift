@@ -10,6 +10,7 @@ import UIKit
 
 class ShoppingCartViewController: UIViewController {
     
+    @IBOutlet weak var priceTotal: UILabel!
     
     var shopingCartList = [ShoppingCartItem]()
     var barracaViewController:BarracaViewController?
@@ -20,8 +21,38 @@ class ShoppingCartViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        total()
+    }
+    
+    func total(){
+        var total = 0.0
+        for item in shopingCartList{
+            total += item.subTotal
+        }
+        priceTotal.text = "$" + String(total)
+        
+    }
 
+    @IBAction func finishPurchaseButtonAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "toShippingData", sender: self)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toShippingData"{
+            let shippingDataViewController = (segue.destination as! ShippingDataViewController)
+            shippingDataViewController.shoppingCartList = shopingCartList
+            
+            
+        }
+    }
 }
+
+
 
 
 extension ShoppingCartViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
