@@ -14,5 +14,6 @@ class Purchase {
     var shippingDate = ""
     var shippingAddress = ""
     var shippingPhone = ""
+    var shippingUser = ""
     
 }

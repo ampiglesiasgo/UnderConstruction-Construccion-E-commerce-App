@@ -13,6 +13,7 @@
 		B90B217222BAFA1500EBE529 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B217122BAFA1500EBE529 /* Translation.swift */; };
 		B90BB2BB22C586B900737FCE /* ProductFinalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */; };
 		B90BB2BD22C58F1700737FCE /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */; };
+		B92F6BF822CA9C0F009C67E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92F6BF722CA9C0F009C67E6 /* User.swift */; };
 		B950B27F22C9124A003BA515 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */; };
 		B950B28122C9C7BE003BA515 /* ShippingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */; };
 		B950B28322C9C8DB003BA515 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950B28222C9C8DB003BA515 /* Purchase.swift */; };
@@ -54,6 +55,7 @@
 		B90B217122BAFA1500EBE529 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		B90BB2BA22C586B900737FCE /* ProductFinalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFinalDetailsViewController.swift; sourceTree = "<group>"; };
 		B90BB2BC22C58F1700737FCE /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		B92F6BF722CA9C0F009C67E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItem.swift; sourceTree = "<group>"; };
 		B950B28022C9C7BE003BA515 /* ShippingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDataViewController.swift; sourceTree = "<group>"; };
 		B950B28222C9C8DB003BA515 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				B96BF50522B73C1B008B93EC /* Product.swift */,
 				B950B27E22C9124A003BA515 /* ShoppingCartItem.swift */,
 				B950B28222C9C8DB003BA515 /* Purchase.swift */,
+				B92F6BF722CA9C0F009C67E6 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				B90B217222BAFA1500EBE529 /* Translation.swift in Sources */,
 				B957C5E722C053710033C0BD /* ProductDetailsViewController.swift in Sources */,
 				B950B28822C9EBEA003BA515 /* FinishViewController.swift in Sources */,
+				B92F6BF822CA9C0F009C67E6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

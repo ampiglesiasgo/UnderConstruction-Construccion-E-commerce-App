@@ -20,6 +20,8 @@ class ModelManager {
     var barracas = [Barraca]()
     var productos = [Product]()
     var filteredBarracas = [Barraca]()
+    var purchases = [Purchase]()
+    var users = [User]()
 
     
     

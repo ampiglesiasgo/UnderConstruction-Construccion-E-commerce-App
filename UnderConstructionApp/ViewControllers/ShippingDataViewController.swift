@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ShippingDataViewController: UIViewController {
 
@@ -59,6 +60,7 @@ class ShippingDataViewController: UIViewController {
             purchase.shoppingCartList = shoppingCartList
             purchase.shippingAddress = shippingAddressTextField.text!
             purchase.shippingPhone = shippingPhoneTextField.text!
+            purchase.shippingUser = (Auth.auth().currentUser?.email)!
             shoppingCartList = [ShoppingCartItem]()
             barracaViewController?.shopingCartList = shoppingCartList
             self.performSegue(withIdentifier: "toFinishView", sender: self)
