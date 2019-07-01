@@ -11,6 +11,7 @@ import UIKit
 class ShoppingCartViewController: UIViewController {
     
     @IBOutlet weak var priceTotal: UILabel!
+    @IBOutlet weak var checkOutButton: UIButton!
     
     var shopingCartList = [ShoppingCartItem]()
     var barracaViewController:BarracaViewController?
@@ -24,6 +25,11 @@ class ShoppingCartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         total()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        checkOutButton.layer.cornerRadius = 15
+        checkOutButton.clipsToBounds = true
     }
     
     func total(){

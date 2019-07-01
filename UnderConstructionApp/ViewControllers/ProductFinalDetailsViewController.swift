@@ -13,6 +13,7 @@ class ProductFinalDetailsViewController: UIViewController {
     @IBOutlet weak var productQuantityLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextView!
     @IBOutlet weak var buttonPlusView: UIView!
+    @IBOutlet weak var addToCartButton: UIButton!
     
     let pickerData = ["Unidad","por m2","Caja","Balde"]
     var unitSelected = "Unidad"
@@ -39,6 +40,11 @@ class ProductFinalDetailsViewController: UIViewController {
         messageTextField.layer.borderWidth = 1
         messageTextField.layer.masksToBounds = true
         messageTextField.layer.cornerRadius = 12
+        addToCartButton.layer.cornerRadius = 15
+        addToCartButton.clipsToBounds = true
+        buttonPlusView.layer.cornerRadius = 15
+        buttonPlusView.clipsToBounds = true
+        
 
     }
     func configureShoppingItem() -> ShoppingCartItem {

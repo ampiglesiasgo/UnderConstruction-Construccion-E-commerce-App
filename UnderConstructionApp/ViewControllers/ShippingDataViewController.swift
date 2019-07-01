@@ -33,6 +33,11 @@ class ShippingDataViewController: UIViewController {
 
     }
     
+    override func viewWillLayoutSubviews() {
+        saveDataButton.layer.cornerRadius = 15
+        saveDataButton.clipsToBounds = true
+    }
+    
     @IBAction func dataPickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         

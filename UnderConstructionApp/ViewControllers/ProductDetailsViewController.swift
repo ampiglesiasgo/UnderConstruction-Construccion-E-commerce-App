@@ -15,6 +15,8 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var productDetailsLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productPhotosCollectionView: UICollectionView!
+    @IBOutlet weak var buyProductButton: UIButton!
+    
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
     var barracaViewController:BarracaViewController?
 
@@ -30,6 +32,11 @@ class ProductDetailsViewController: UIViewController {
         productNameLabel.text = product.name
         productDetailsLabel.text = product.details
         productPriceLabel.text = "$ " +  "\(product.price)"
+    }
+    
+    override func viewWillLayoutSubviews() {
+        buyProductButton.layer.cornerRadius = 15
+        buyProductButton.clipsToBounds = true
     }
     
     @IBAction func productPurchaseButtonAction(_ sender: Any) {

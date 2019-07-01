@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -613,8 +613,6 @@
                                 <state key="normal" title="Comprar Producto"/>
                                 <connections>
                                     <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="ddV-qx-FDb"/>
-                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="aQo-f4-0Xr"/>
-                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YLf-i8-bi6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -945,9 +943,6 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Comprar Producto"/>
                                 <connections>
-                                    <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="gvb-Ne-AvW"/>
-                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="2VE-gf-Cnf"/>
-                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKQ-Fv-U6W"/>
                                     <action selector="productPurchaseButtonAction:" destination="hEv-39-KE6" eventType="touchUpInside" id="dn2-1n-SEK"/>
                                 </connections>
                             </button>
@@ -974,6 +969,7 @@
                         <viewLayoutGuide key="safeArea" id="yjX-JK-uSG"/>
                     </view>
                     <connections>
+                        <outlet property="buyProductButton" destination="pwm-9T-su2" id="c4n-P2-drL"/>
                         <outlet property="productDetailsLabel" destination="E5a-nn-u6g" id="JeW-Wi-6tR"/>
                         <outlet property="productNameLabel" destination="w9x-V4-HoV" id="C3c-We-5Fw"/>
                         <outlet property="productPhotosCollectionView" destination="cOo-y8-3bY" id="BHz-CD-pUd"/>
@@ -1030,9 +1026,6 @@
                                 <state key="normal" title="Agregar al carro"/>
                                 <connections>
                                     <action selector="addItemToChartButtonAction:" destination="iFb-6p-Pxl" eventType="touchUpInside" id="4tp-Nu-hrh"/>
-                                    <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="p3t-EU-cpA"/>
-                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="1TO-zf-FL0"/>
-                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vt9-CT-YQm"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="noT-3L-BTX">
@@ -1125,6 +1118,7 @@
                         <viewLayoutGuide key="safeArea" id="hm2-N2-nHQ"/>
                     </view>
                     <connections>
+                        <outlet property="addToCartButton" destination="CsQ-uy-E65" id="9H2-Q0-coY"/>
                         <outlet property="buttonPlusView" destination="nn7-4y-XCi" id="62P-Dz-fYr"/>
                         <outlet property="messageTextField" destination="noT-3L-BTX" id="t3j-R8-o8K"/>
                         <outlet property="productQuantityLabel" destination="UXB-c3-ggA" id="A4J-P0-nqf"/>
@@ -1229,10 +1223,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="CheckOut"/>
                                 <connections>
-                                    <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="ATC-rN-sRq"/>
                                     <action selector="finishPurchaseButtonAction:" destination="LqE-KV-QMe" eventType="touchUpInside" id="Iy9-aT-eTu"/>
-                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="dfJ-mT-rhm"/>
-                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWq-CZ-nQG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu Pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-IG-web">
@@ -1275,6 +1266,7 @@
                         <viewLayoutGuide key="safeArea" id="jtt-Ee-nzu"/>
                     </view>
                     <connections>
+                        <outlet property="checkOutButton" destination="hCi-b7-AyM" id="oij-Nw-2Qc"/>
                         <outlet property="priceTotal" destination="XMM-89-kfD" id="gr3-JC-B5V"/>
                         <segue destination="dYe-cu-5Yh" kind="show" identifier="toShippingData" id="wXl-cX-OB4"/>
                     </connections>
@@ -1310,9 +1302,6 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Finalizar Compra"/>
                                 <connections>
-                                    <action selector="buyProductActionButton:" destination="J6F-BO-fNd" eventType="touchUpInside" id="NRV-8Y-9Uo"/>
-                                    <action selector="logInStartAction:" destination="DfL-bv-Kn0" eventType="touchUpInside" id="IM0-47-jZh"/>
-                                    <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJC-JS-6Sd"/>
                                     <action selector="sendPurchaseDataButtonAction:" destination="dYe-cu-5Yh" eventType="touchUpInside" id="Rdn-cO-xza"/>
                                 </connections>
                             </button>
@@ -1516,7 +1505,6 @@
                                 </state>
                                 <connections>
                                     <action selector="LogOutButtonAction:" destination="o5C-kW-bHE" eventType="touchUpInside" id="0TG-4q-cVD"/>
-                                    <action selector="singUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3j-NS-xeB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola! , " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-2H-Bad">
@@ -1695,7 +1683,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wub-pM-hWT"/>
-        <segue reference="YEO-VX-fYm"/>
+        <segue reference="6xs-oa-Eow"/>
         <segue reference="bcT-yV-Wuq"/>
     </inferredMetricsTieBreakers>
 </document>
