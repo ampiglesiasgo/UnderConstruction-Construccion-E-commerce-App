@@ -44,15 +44,6 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillLayoutSubviews() {
-        let alignedFlowLayout = AlignedCollectionViewFlowLayout(horizontalAlignment: .left,
-                                                                verticalAlignment: .top)
-        
-        alignedFlowLayout.minimumInteritemSpacing = 1.0
-        alignedFlowLayout.minimumLineSpacing = 1.0
-
-        baseCollectionView.collectionViewLayout = alignedFlowLayout
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         homeActivityIndicator.isHidden = false
