@@ -19,8 +19,8 @@ class BarracaProductCollectionViewCell: UICollectionViewCell {
         productImageView.layer.cornerRadius = 12
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 12
-        let screenSize: CGRect = self.frame
-        productImageView.frame = CGRect(x: 18, y: 18, width: screenSize.width * 0.80, height: screenSize.width * 0.80)
+//        let screenSize: CGRect = self.frame
+//        productImageView.frame = CGRect(x: 18, y: 18, width: screenSize.width * 0.80, height: screenSize.width * 0.80)
         
     }
     
