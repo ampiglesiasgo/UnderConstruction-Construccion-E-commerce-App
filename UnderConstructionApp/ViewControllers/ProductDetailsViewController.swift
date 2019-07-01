@@ -49,7 +49,6 @@ class ProductDetailsViewController: UIViewController {
         }
     }
 
-
 }
 
 extension ProductDetailsViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

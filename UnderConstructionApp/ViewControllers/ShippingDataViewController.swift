@@ -29,5 +29,25 @@ class ShippingDataViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func dataPickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: shippingDatePicker.date)
+        purchase.shippingDate = strDate
+    }
+    
+    @IBAction func sendPurchaseDataButtonAction(_ sender: Any) {
+        purchase.shippingName = shippingNameTextField.text!
+        purchase.shoppingCartList = shoppingCartList
+        purchase.shippingAddress = shippingAddressTextField.text!
+        purchase.shippingPhone = shippingPhoneTextField.text!
+        self.performSegue(withIdentifier: "toFinishView", sender: self)
+
+    }
+    
+    
 
 }
