@@ -25,8 +25,10 @@ class ShippingDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.shippingNameTextField.delegate = self
+        self.shippingAddressTextField.delegate = self
+        self.shippingPhoneTextField.delegate = self
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func dataPickerChanged(_ sender: Any) {
@@ -49,5 +51,12 @@ class ShippingDataViewController: UIViewController {
     }
     
     
+}
 
+extension ShippingDataViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

@@ -23,9 +23,14 @@ class BarracaViewController: UIViewController {
         let barraca = ModelManager.shared.barracas[index]
         logoImageView.kf.setImage(with: URL(string: barraca.photourl))
         self.title = barraca.name
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.back(sender:)))
+        newBackButton.image = UIImage(named: "back")
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(addTapped))
         if shopingCartList.count == 0 {
             navigationItem.rightBarButtonItem?.image = UIImage(named: "carritoVacio")
@@ -45,6 +50,28 @@ class BarracaViewController: UIViewController {
     @objc func addTapped() {
         self.performSegue(withIdentifier: "toShoppingCart", sender: self)
 
+    }
+    
+
+    @objc func back(sender: UIBarButtonItem) {
+        
+        if shopingCartList.count > 0 {
+            let alert = UIAlertController(title: "¿Estas seguro de que queres salir?", message: "Al hacerlo, se eliminara tu pedido.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Si, Salir", style: .default, handler: { (action: UIAlertAction!) in
+                _ = self.navigationController?.popViewController(animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+                print("Stay here")
+            }))
+            
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            _ = self.navigationController?.popViewController(animated: true)
+
+        }
     }
     
 
