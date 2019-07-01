@@ -26,7 +26,11 @@ class ProductFinalDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HideKeyboard()
+        messageTextField.delegate = self
+        messageTextField.text = "Deje su comentario..."
+        messageTextField.textColor = UIColor.lightGray
 
+        
         // Do any additional setup after loading the view.
     }
     
@@ -112,6 +116,25 @@ extension ProductFinalDetailsViewController {
     
     @objc func DismissKeyboard(){
         view.endEditing(true)
+    }
+    
+    
+}
+
+extension ProductFinalDetailsViewController : UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if messageTextField.textColor == UIColor.lightGray {
+            messageTextField.text = nil
+            messageTextField.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if messageTextField.text.isEmpty {
+            messageTextField.text = "Deje su comentario..."
+            messageTextField.textColor = UIColor.lightGray
+        }
     }
     
     

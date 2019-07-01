@@ -1035,7 +1035,7 @@
                                     <action selector="loginActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vt9-CT-YQm"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Deje sus comentarios..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="noT-3L-BTX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="noT-3L-BTX">
                                 <rect key="frame" x="169" y="348" width="186" height="191"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
