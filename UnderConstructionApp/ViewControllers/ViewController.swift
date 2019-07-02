@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -15,12 +16,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginEmailTextField: UITextField!
     @IBOutlet weak var loginPasswordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+    var db: Firestore!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.HideKeyboard()
-        
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
+
 
     }
     
@@ -39,18 +44,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //Send data to the toRegisterSegue
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "toRegisterSegue"{
-//            let registerViewController = (segue.destination as! RegisterViewController)
-//
-//        }
-//        if segue.identifier == "loginToHomeSegue"{
-//            let homeViewController = (segue.destination as! HomeViewController)
-//            
-//        }
-//    }
+
     
     
     @IBAction func singUpButton(_ sender: Any) {
@@ -64,11 +58,36 @@ class ViewController: UIViewController {
             if error == nil{
                 let user = User()
                 user.email = self.loginEmailTextField.text!
-                if !(ModelManager.shared.users.contains(where: { $0.email == user.email })){
-                    ModelManager.shared.users.append(user)
+                self.db.collection("users").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            let userData = document.data()
+                            if (userData.contains(where: { $0.value as! String == user.email })){
+                                for data in userData{
+                                    if data.key == "username"{
+                                        user.username = data.value as! String
+                                    }
+                                    if data.key == "userRealName"{
+                                        user.name = data.value as! String
+                                    }
+                                    if data.key == "userAddress"{
+                                        user.address = data.value as! String
+                                    }
+                                    if data.key == "userPhone"{
+                                        user.phone = data.value as! String
+                                    }
+                                }
+                
+                                ModelManager.shared.users.append(user)
+                                break
+                            }
+                        }
                 }
                 
                 self.performSegue(withIdentifier: "loginToHomeSegue", sender: self)
+            }
             }
             else{
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

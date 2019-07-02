@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class UserDataViewController: UIViewController {
     
@@ -25,9 +26,14 @@ class UserDataViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     var connectedUser = Auth.auth().currentUser
+    var db: Firestore!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
 
         // Do any additional setup after loading the view.
     }
@@ -131,8 +137,43 @@ class UserDataViewController: UIViewController {
                 user.name = nameTextField.text!
                 user.address = addressTextField.text!
                 user.phone = phoneTextField.text!
+                var documentId = ""
+                db.collection("users").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        var useremail = ""
+                        for document in querySnapshot!.documents {
+                            let bannerData = document.data()
+                            for data in bannerData{
+                                if data.key == "useremail"{
+                                    useremail = data.value as! String
+                                    if useremail == self.connectedUser?.email{
+                                        documentId = document.documentID
+                                        break
+                                    }
+                                }
+
+                            }
+                        if !(documentId == ""){break}
+                        }
+                        
+                        let userData = self.db.collection("users").document(documentId)
+                        userData.updateData([
+                            "userRealName": user.name,
+                            "userAddress" : user.address,
+                            "userPhone" : user.phone
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
+                    }
+                }
             }
-        }
-    }
     
+    }
+}
 }

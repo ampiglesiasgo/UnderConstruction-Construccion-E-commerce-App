@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -18,10 +19,15 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerBackView: UIView!
     
     @IBOutlet weak var registerButton: UIButton!
+    var db: Firestore!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HideKeyboard()
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
 
         // Do any additional setup after loading the view.
     }
@@ -63,6 +69,20 @@ class RegisterViewController: UIViewController {
                 user.username = self.userNameTextField.text!
                 if !(ModelManager.shared.users.contains(where: { $0.email == user.email })){
                     ModelManager.shared.users.append(user)
+                }
+                var ref: DocumentReference? = nil
+                ref = self.db.collection("users").addDocument(data: [
+                    "username": user.username,
+                    "useremail": user.email,
+                    "userRealName": user.name,
+                    "userAddress" : user.address,
+                    "userPhone" : user.phone
+                ]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document added with ID: \(ref!.documentID)")
+                    }
                 }
                 
                 self.performSegue(withIdentifier: "RegisterToHomeSegue", sender: self)
