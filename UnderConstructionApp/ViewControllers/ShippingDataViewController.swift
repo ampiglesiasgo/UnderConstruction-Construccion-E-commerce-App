@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class ShippingDataViewController: UIViewController {
 
@@ -21,6 +22,8 @@ class ShippingDataViewController: UIViewController {
     
     @IBOutlet weak var saveDataButton: UIButton!
     
+    var db: Firestore!
+    
     var purchase = Purchase()
     var shoppingCartList = [ShoppingCartItem]()
     var barracaViewController:BarracaViewController?
@@ -31,6 +34,10 @@ class ShippingDataViewController: UIViewController {
         self.shippingNameTextField.delegate = self
         self.shippingAddressTextField.delegate = self
         self.shippingPhoneTextField.delegate = self
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
+
 
     }
     
@@ -80,6 +87,24 @@ class ShippingDataViewController: UIViewController {
             purchase.shippingUser = (Auth.auth().currentUser?.email)!
             shoppingCartList = [ShoppingCartItem]()
             barracaViewController?.shopingCartList = shoppingCartList
+            ModelManager.shared.purchases.append(purchase)
+            
+//            var ref: DocumentReference? = nil
+//            ref = self.db.collection("Compras").addDocument(data: [
+//                "User": purchase.shippingUser,
+//                "Name" : purchase.shippingName,
+//                "Address" : purchase.shippingAddress,
+//                "Phone" : purchase.shippingPhone,
+//                "Date" : purchase.shippingDate,
+//                "Cart" : purchase.shoppingCartList
+//                
+//            ]) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
             self.performSegue(withIdentifier: "toFinishView", sender: self)
         }
 

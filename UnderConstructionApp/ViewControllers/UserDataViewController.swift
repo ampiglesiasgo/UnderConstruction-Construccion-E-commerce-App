@@ -54,6 +54,8 @@ class UserDataViewController: UIViewController {
                     nameTextField.isHidden = true
                     nameTextLabel.text = user.name
                     nameTextField.text = user.name
+                    saveButton.isHidden = true
+                    editButton.isHidden = false
                 }
                 if !(user.address == "") {
                     addressTextLabel.isHidden = false
