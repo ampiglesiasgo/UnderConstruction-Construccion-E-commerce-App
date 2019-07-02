@@ -101,8 +101,6 @@ class ShippingDataViewController: UIViewController {
 
             }
             
-            
-            
             purchase.shippingName = shippingNameTextField.text!
             purchase.shoppingCartList = shoppingCartList
             purchase.shippingAddress = shippingAddressTextField.text!

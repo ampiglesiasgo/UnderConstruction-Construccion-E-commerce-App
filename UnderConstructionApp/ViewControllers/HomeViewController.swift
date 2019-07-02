@@ -54,7 +54,9 @@ class HomeViewController: UIViewController {
         getBanner(db: db) { (finishBanner) in
             if finishBanner{
                 for b in ModelManager.shared.banners {
-                    self.bannersUrl.append(b.photourl)
+                    if !(self.bannersUrl.contains(where: { $0 ==  b.photourl})){
+                        self.bannersUrl.append(b.photourl)
+                    }
                 }
                 self.itemCount += 2
                 self.finishBanner = finishBanner
