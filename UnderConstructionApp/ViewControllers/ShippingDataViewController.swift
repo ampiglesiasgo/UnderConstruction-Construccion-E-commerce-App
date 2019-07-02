@@ -66,7 +66,7 @@ class ShippingDataViewController: UIViewController {
     @IBAction func dataPickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.dateStyle = DateFormatter.Style.full
         dateFormatter.timeStyle = DateFormatter.Style.short
         
         let strDate = dateFormatter.string(from: shippingDatePicker.date)
@@ -80,6 +80,29 @@ class ShippingDataViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         else{
+            var cart = [NSDictionary]()
+            var i = 0
+            for shopItem in shoppingCartList {
+                
+                let shopDetails : NSDictionary = [
+                    "Comments" : shopItem.comments,
+                    "Quantity": shopItem.quantity,
+                    "Subtotal" : shopItem.subTotal,
+                    "Unit" : shopItem.unit,
+                    "Product id" : shopItem.product.id,
+                "Product id" : shopItem.product.name,
+                "Product category" : shopItem.product.category,
+                "Product details" : shopItem.product.details,
+                "Product price" : shopItem.product.price
+                ]
+                let cartData : NSDictionary = [ "\(i)" : shopDetails]
+                cart.append(cartData)
+                i = i + 1
+
+            }
+            
+            
+            
             purchase.shippingName = shippingNameTextField.text!
             purchase.shoppingCartList = shoppingCartList
             purchase.shippingAddress = shippingAddressTextField.text!
@@ -89,22 +112,22 @@ class ShippingDataViewController: UIViewController {
             barracaViewController?.shopingCartList = shoppingCartList
             ModelManager.shared.purchases.append(purchase)
             
-//            var ref: DocumentReference? = nil
-//            ref = self.db.collection("Compras").addDocument(data: [
-//                "User": purchase.shippingUser,
-//                "Name" : purchase.shippingName,
-//                "Address" : purchase.shippingAddress,
-//                "Phone" : purchase.shippingPhone,
-//                "Date" : purchase.shippingDate,
-//                "Cart" : purchase.shoppingCartList
-//                
-//            ]) { err in
-//                if let err = err {
-//                    print("Error adding document: \(err)")
-//                } else {
-//                    print("Document added with ID: \(ref!.documentID)")
-//                }
-//            }
+            var ref: DocumentReference? = nil
+            ref = self.db.collection("Compras").addDocument(data: [
+                "User": purchase.shippingUser,
+                "Name" : purchase.shippingName,
+                "Address" : purchase.shippingAddress,
+                "Phone" : purchase.shippingPhone,
+                "Date" : purchase.shippingDate,
+                "Cart" : cart
+                
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
             self.performSegue(withIdentifier: "toFinishView", sender: self)
         }
 
