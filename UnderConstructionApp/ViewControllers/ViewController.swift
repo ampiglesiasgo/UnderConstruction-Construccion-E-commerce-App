@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
 
-
     }
     
     override func viewWillLayoutSubviews() {
@@ -79,7 +78,6 @@ class ViewController: UIViewController {
                                         user.phone = data.value as! String
                                     }
                                 }
-                
                                 ModelManager.shared.users.append(user)
                                 break
                             }

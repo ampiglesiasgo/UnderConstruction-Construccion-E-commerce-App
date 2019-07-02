@@ -90,8 +90,6 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.productImageView.kf.setImage(with: URL(string: product.photourl))
-//        let screenSize: CGRect = cell.frame
-//        cell.productImageView.frame = CGRect(x: 18, y: 18, width: screenSize.width * 0.80, height: screenSize.width * 0.80)
         cell.productNameLabel.text = product.name
         cell.productPriceLabel.text = "$ " + "\(product.price)"
         

@@ -18,7 +18,6 @@ class ProductFinalDetailsViewController: UIViewController {
     let pickerData = ["Unidad","por m2","Caja","Balde"]
     var unitSelected = "Unidad"
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
-    //var shopingCartList = [ShoppingCartItem]()
     var barracaViewController:BarracaViewController?
 
 
@@ -78,18 +77,6 @@ class ProductFinalDetailsViewController: UIViewController {
         quantity = quantity! - 1
         productQuantityLabel.text = String(quantity!)
     }
-    
-    
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "toShoppingCart"{
-//            let shoppingCartViewController = (segue.destination as! ShoppingCartViewController)
-//            //            productDetailsViewController.product = product
-//
-//
-//        }
-//    }
 
 }
 

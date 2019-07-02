@@ -142,7 +142,6 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         }
                         if !(self.filterCategory == ""){
                             if p.category.uppercased().contains(self.filterCategory.uppercased()){
-                                //for b in ModelManager.shared.barracas {
                                     if b.products.contains(where: { $0.id == p.id }){
                                         ModelManager.shared.filteredBarracas.append(b)
                                     }
@@ -152,8 +151,6 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
                         }
                     }
                 }
-              // self.filterCategory = ""
-             //  self.classifierResult = ""
                 completionHandler(result)
                 }
         }
@@ -172,7 +169,6 @@ class BarracasTableViewController: UIViewController,  UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "barracaCell", for : indexPath) as! BarracasTableViewCell
-        //cell.selectedBackgroundView 
         if filterBarracas{
             let barraca =  ModelManager.shared.filteredBarracas[indexPath.row]
             cell.barracaNameLabel.text = barraca.name
