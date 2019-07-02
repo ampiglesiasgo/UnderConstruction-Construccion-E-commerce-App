@@ -1316,13 +1316,13 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQw-jn-jti">
-                                <rect key="frame" x="50" y="134" width="66" height="21"/>
+                                <rect key="frame" x="50" y="134" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwC-tV-qZl">
-                                <rect key="frame" x="126" y="129.5" width="199" height="30"/>
+                                <rect key="frame" x="133" y="129.5" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1340,13 +1340,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQn-Vc-zXB">
-                                <rect key="frame" x="50" y="236" width="66" height="21"/>
+                                <rect key="frame" x="50" y="236" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-xT-4kj">
-                                <rect key="frame" x="126" y="231.5" width="199" height="30"/>
+                                <rect key="frame" x="133" y="231.5" width="192" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1377,6 +1377,8 @@
                             <constraint firstItem="Ae1-HT-j8x" firstAttribute="centerX" secondItem="tcJ-0P-dX1" secondAttribute="centerX" id="ZVl-Ab-Y4V"/>
                             <constraint firstItem="SQw-jn-jti" firstAttribute="centerY" secondItem="lwC-tV-qZl" secondAttribute="centerY" id="a4e-4d-sk8"/>
                             <constraint firstItem="tcJ-0P-dX1" firstAttribute="bottom" secondItem="Ae1-HT-j8x" secondAttribute="bottom" constant="15" id="bcB-b0-2GY"/>
+                            <constraint firstItem="UqP-xT-4kj" firstAttribute="leading" secondItem="pHi-DR-ibe" secondAttribute="leading" id="cJc-MV-mHA"/>
+                            <constraint firstItem="lwC-tV-qZl" firstAttribute="leading" secondItem="pHi-DR-ibe" secondAttribute="leading" id="g2D-Az-WQm"/>
                             <constraint firstItem="eqz-oY-Is7" firstAttribute="centerX" secondItem="tcJ-0P-dX1" secondAttribute="centerX" id="iZc-dt-6R5"/>
                             <constraint firstItem="Szs-0V-MiJ" firstAttribute="top" secondItem="EQn-Vc-zXB" secondAttribute="bottom" constant="40" id="ifg-qp-eoS"/>
                             <constraint firstItem="Ae1-HT-j8x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hb1-DU-5J9" secondAttribute="bottom" constant="10" id="nNV-V3-O1z"/>
