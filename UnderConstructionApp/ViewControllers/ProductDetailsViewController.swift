@@ -67,10 +67,19 @@ extension ProductDetailsViewController : UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productPhotosCell", for: indexPath) as! ProductPhotoCollectionViewCell
         cell.productImage.kf.setImage(with: URL(string: product.photoGallery[indexPath.row]))
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 12
         
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat =  10
+        let collectionViewSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionViewSize, height: collectionViewSize)
+    }
     
 }

@@ -89,7 +89,11 @@ extension BarracaViewController : UICollectionViewDataSource, UICollectionViewDe
         let product = products[indexPath.row]
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 12
         cell.productImageView.kf.setImage(with: URL(string: product.photourl))
+        cell.productImageView.layer.masksToBounds = true
+        cell.productImageView.layer.cornerRadius = 12
         cell.productNameLabel.text = product.name
         cell.productPriceLabel.text = "$ " + "\(product.price)"
         

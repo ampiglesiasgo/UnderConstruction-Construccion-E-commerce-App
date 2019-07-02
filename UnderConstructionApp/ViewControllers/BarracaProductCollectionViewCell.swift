@@ -14,13 +14,5 @@ class BarracaProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     
-    override func layoutSubviews() {
-        productImageView.layer.masksToBounds = true
-        productImageView.layer.cornerRadius = 12
-        self.layer.masksToBounds = true
-        self.layer.cornerRadius = 12
-
-        
-    }
     
 }
