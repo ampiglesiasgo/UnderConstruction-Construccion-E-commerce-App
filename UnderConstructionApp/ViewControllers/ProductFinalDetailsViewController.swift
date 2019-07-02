@@ -15,7 +15,7 @@ class ProductFinalDetailsViewController: UIViewController {
     @IBOutlet weak var buttonPlusView: UIView!
     @IBOutlet weak var addToCartButton: UIButton!
     
-    let pickerData = ["Unidad","por m2","Caja","Balde"]
+    let pickerData = ["Unidad","Por m2","Caja","Balde"]
     var unitSelected = "Unidad"
     var product = Product(id:0,name:"",photourl:"",category : "", details : "", price : 0, photoGallery : [String]())
     var barracaViewController:BarracaViewController?

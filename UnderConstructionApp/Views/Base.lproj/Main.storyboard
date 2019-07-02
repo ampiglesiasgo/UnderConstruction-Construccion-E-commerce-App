@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-7l-bke">
-                                <rect key="frame" x="65" y="126" width="245" height="245.00000000000006"/>
+                                <rect key="frame" x="65" y="126" width="245" height="245"/>
                                 <color key="backgroundColor" red="1" green="0.86274509803921573" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BPe-7l-bke" secondAttribute="height" multiplier="1:1" id="h3Q-jR-AMV"/>
@@ -991,16 +991,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay0-gw-UfY">
-                                <rect key="frame" x="30" y="128" width="80" height="60"/>
+                                <rect key="frame" x="30" y="128" width="80" height="90"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkZ-fu-aBf">
-                                <rect key="frame" x="140" y="128" width="120" height="60"/>
+                                <rect key="frame" x="140" y="128" width="120" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Kve-Lt-EAM"/>
-                                    <constraint firstAttribute="height" constant="60" id="Zo6-ia-oPi"/>
+                                    <constraint firstAttribute="height" constant="90" id="Zo6-ia-oPi"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="iFb-6p-Pxl" id="1sE-vJ-wOp"/>
@@ -1008,13 +1008,13 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-Nm-0OO">
-                                <rect key="frame" x="30" y="253" width="80" height="30"/>
+                                <rect key="frame" x="30" y="283" width="80" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comentarios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mro-iO-9EG">
-                                <rect key="frame" x="30" y="348" width="109" height="22"/>
+                                <rect key="frame" x="30" y="378" width="109" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1030,12 +1030,12 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="noT-3L-BTX">
-                                <rect key="frame" x="169" y="348" width="186" height="191"/>
+                                <rect key="frame" x="169" y="378" width="186" height="161"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nn7-4y-XCi" userLabel="ButtonPlusView">
-                                <rect key="frame" x="140" y="253" width="70" height="30"/>
+                                <rect key="frame" x="140" y="283" width="70" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyB-Pb-d8w" userLabel="ButtonPlus">
                                         <rect key="frame" x="47" y="0.0" width="23" height="30"/>

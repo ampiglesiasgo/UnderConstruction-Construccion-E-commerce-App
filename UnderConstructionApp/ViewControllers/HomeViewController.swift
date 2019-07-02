@@ -183,8 +183,6 @@ extension HomeViewController : UICollectionViewDataSource, UICollectionViewDeleg
             cell.layer.cornerRadius = 12
             cell.bannerCollectionView.layer.masksToBounds = true
             cell.bannerCollectionView.layer.cornerRadius = 12
-
-//            cell.bannerCollectionView.reloadData()
             return cell
         }
         if indexPath.row == 1 {
