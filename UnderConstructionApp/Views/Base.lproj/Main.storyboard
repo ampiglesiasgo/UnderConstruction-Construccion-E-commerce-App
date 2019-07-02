@@ -1503,8 +1503,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-0y-Y9R">
-                                <rect key="frame" x="113" y="94" width="0.0" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-0y-Y9R">
+                                <rect key="frame" x="96.5" y="94" width="0.0" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1545,8 +1545,8 @@
                                     <action selector="editDataButton:" destination="o5C-kW-bHE" eventType="touchUpInside" id="2ms-sp-2Pl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola! , " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-2H-Bad">
-                                <rect key="frame" x="30" y="94" width="78" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Hola," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-2H-Bad">
+                                <rect key="frame" x="30" y="94" width="61.5" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1616,7 +1616,6 @@
                             <constraint firstItem="P7o-Tj-JwR" firstAttribute="trailing" secondItem="Bge-4i-UHc" secondAttribute="trailing" id="vYB-2i-ZKo"/>
                             <constraint firstItem="12L-UH-CRh" firstAttribute="leading" secondItem="yrL-8A-MUY" secondAttribute="leading" constant="40" id="vm4-p2-Ni6"/>
                             <constraint firstItem="S9e-yB-fmt" firstAttribute="top" secondItem="zeP-Ur-IdU" secondAttribute="bottom" constant="15" id="vnF-fa-qcS"/>
-                            <constraint firstItem="yrL-8A-MUY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hgp-0y-Y9R" secondAttribute="trailing" constant="40" id="zNO-Rt-tXF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yrL-8A-MUY"/>
                     </view>
