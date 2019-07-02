@@ -55,7 +55,7 @@ class UserDataViewController: UIViewController {
                     addressTextLabel.text = user.address
                     addressTextField.text = user.address
                 }
-                if user.phone == "" {
+                if !(user.phone == "") {
                     phoneTextLabel.isHidden = false
                     phoneTextField.isHidden = true
                     phoneTextLabel.text = user.phone

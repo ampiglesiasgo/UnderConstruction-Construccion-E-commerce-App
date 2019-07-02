@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UnderConstructionApp/ViewControllers/ShippingDataViewController.swift"
+            timestampString = "583740386.241317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UnderConstructionApp.ShippingDataViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "UnderConstructionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ampi/Google%20Drive/DispositivosMoviles/UnderConstructionApp/UnderConstructionApp/ViewControllers/ShippingDataViewController.swift"
+                  timestampString = "583740386.561668"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (UnderConstructionApp.User) -&gt; Swift.Bool in UnderConstructionApp.ShippingDataViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "UnderConstructionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ampi/Google%20Drive/DispositivosMoviles/UnderConstructionApp/UnderConstructionApp/ViewControllers/ShippingDataViewController.swift"
+                  timestampString = "583740386.5644619"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

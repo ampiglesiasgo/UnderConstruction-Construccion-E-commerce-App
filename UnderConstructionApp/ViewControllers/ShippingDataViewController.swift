@@ -34,6 +34,23 @@ class ShippingDataViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if (ModelManager.shared.users.contains(where: { $0.email == Auth.auth().currentUser?.email })){
+            if let i = ModelManager.shared.users.firstIndex(where: {$0.email == Auth.auth().currentUser?.email}) {
+                let user = ModelManager.shared.users[i]
+                if !(user.name == "") {
+                    shippingNameTextField.text = user.name
+                }
+                if !(user.address == "") {
+                    shippingAddressTextField.text = user.address
+                }
+                if !(user.phone == "") {
+                    shippingPhoneTextField.text = user.phone
+                }
+            }
+        }
+    }
+    
     override func viewWillLayoutSubviews() {
         saveDataButton.layer.cornerRadius = 15
         saveDataButton.clipsToBounds = true
