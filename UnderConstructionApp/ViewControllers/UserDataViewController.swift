@@ -34,6 +34,9 @@ class UserDataViewController: UIViewController {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        nameTextField.delegate = self
+        addressTextField.delegate = self
+        phoneTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -178,4 +181,12 @@ class UserDataViewController: UIViewController {
     
     }
 }
+}
+
+extension UserDataViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
