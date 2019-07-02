@@ -12,6 +12,6 @@ class User {
     var username = ""
     var email = ""
     var name = ""
-    var direccion = ""
+    var address = ""
     var phone = ""
 }

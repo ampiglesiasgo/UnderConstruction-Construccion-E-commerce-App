@@ -58,6 +58,13 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonAction(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
             if error == nil {
+                let user = User()
+                user.email = self.emailTextField.text!
+                user.username = self.userNameTextField.text!
+                if !(ModelManager.shared.users.contains(where: { $0.email == user.email })){
+                    ModelManager.shared.users.append(user)
+                }
+                
                 self.performSegue(withIdentifier: "RegisterToHomeSegue", sender: self)
             }
             else{

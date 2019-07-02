@@ -62,6 +62,12 @@ class ViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
             if error == nil{
+                let user = User()
+                user.email = self.loginEmailTextField.text!
+                if !(ModelManager.shared.users.contains(where: { $0.email == user.email })){
+                    ModelManager.shared.users.append(user)
+                }
+                
                 self.performSegue(withIdentifier: "loginToHomeSegue", sender: self)
             }
             else{
