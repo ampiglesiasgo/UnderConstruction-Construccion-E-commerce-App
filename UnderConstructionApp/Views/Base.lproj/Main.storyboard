@@ -816,6 +816,7 @@
                                             <constraint firstItem="42V-kr-efX" firstAttribute="top" secondItem="dOH-Ia-cyh" secondAttribute="bottom" constant="10" id="Zc1-mx-KrZ"/>
                                             <constraint firstItem="dOH-Ia-cyh" firstAttribute="top" secondItem="ivD-6F-Z8D" secondAttribute="bottom" constant="10" id="hHt-D2-9hg"/>
                                             <constraint firstItem="dOH-Ia-cyh" firstAttribute="leading" secondItem="Boe-0f-4y9" secondAttribute="leading" constant="20" id="hUi-We-x5o"/>
+                                            <constraint firstItem="ivD-6F-Z8D" firstAttribute="centerX" secondItem="Boe-0f-4y9" secondAttribute="centerX" id="wWz-Kr-zUo"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="42V-kr-efX" secondAttribute="bottom" constant="5" id="xD9-ma-c79"/>
                                             <constraint firstItem="ivD-6F-Z8D" firstAttribute="top" secondItem="Boe-0f-4y9" secondAttribute="top" constant="10" id="zeF-em-ag1"/>
                                         </constraints>
